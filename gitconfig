@@ -3,7 +3,7 @@
     email = miguel.frde@gmail.com
 [core]
     quotepath    = false
-    excludesfile = /.gitignore
+    excludesfile = ~/.gitignore
     editor       = sublime -w
 [alias]
     ci = commit
