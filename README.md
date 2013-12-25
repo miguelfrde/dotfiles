@@ -18,10 +18,10 @@ Included
 
 - osx.sh: run it to update preferences of the following apps: Finder, Dock, Safari, Mail, Activity Monitor, Transmission and other OSX settings.
 
-- packages/*: install.sh uses the file contained in that directory to install all gems and pip & brew packages.
+- packages/*: install.sh uses the files contained in here to install all gems and pip & brew packages.
 
-- sublime/*: Sublime Text preferences file, ST Package Manager settings file and a script to install ST Package Manager and do some other things.
+- sublime/*: Sublime Text preferences file, ST Package Manager settings file and a script to install ST Package Manager and setup Sublime Text.
 
-This script was inspired in part by Mathias Bynens' great [dotfiles](https://github.com/mathiasbynens/dotfiles).
+This repo was inspired in part by Mathias Bynens' great [dotfiles](https://github.com/mathiasbynens/dotfiles).
 
 
