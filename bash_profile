@@ -2,6 +2,9 @@
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH
 
+# Link Homebrew apps to /Applications, not the default ~/Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications" 
+
 # Always show colors
 export CLICOLOR=1
 
