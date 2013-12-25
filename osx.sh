@@ -228,6 +228,15 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
+
+#################################
+#             iTunes            #
+#################################
+
+# Allow half stars
+defaults write com.apple.iTunes 'allow-half-stars' -bool true
+
+
 #################################
 #        Transmission       #
 #################################
@@ -250,8 +259,10 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # Hide the donate message
 defaults write org.m0k.transmission WarningDonate -bool false
+
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
+
 
 #################################
 #       Kill affected apps      #
