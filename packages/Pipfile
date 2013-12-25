@@ -1,0 +1,13 @@
+pyparsing
+ipython
+virtualenv
+Flask
+Django
+requests
+texttable
+twitter
+facepy
+termcolor
+django-polymorphic
+python-social-auth
+pyflakes

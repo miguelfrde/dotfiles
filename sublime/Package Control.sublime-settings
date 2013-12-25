@@ -1,0 +1,19 @@
+{
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"ApplySyntax",
+		"BracketHighlighter",
+		"Emmet",
+		"Git",
+		"Neon Color Scheme",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-html-tidy",
+		"SublimeLinter-pep257",
+		"SublimeLinter-pep8",
+		"SublimeLinter-pyflakes",
+		"Theme - Soda"
+	]
+}

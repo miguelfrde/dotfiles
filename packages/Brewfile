@@ -1,0 +1,77 @@
+update
+upgrade
+
+tap homebrew/versions
+tap homebrew/science
+tap samueljohn/python
+tap phinze/homebrew-cask
+tap caskroom/versions
+
+# Languages
+install clisp
+install haskell-platform
+install python
+install python3
+install ruby
+install scala --with-docs
+
+# Databases
+install sqlite
+install postgres
+
+# Terminal
+install ack
+install bash-completion
+install tree
+install wget
+
+# VCS
+install git
+install hub
+
+# Media
+install jpeg
+install ffmpeg
+
+# Python
+install pypy
+install pyqt
+
+# Other
+install graphviz
+install gist
+install heroku-toolbelt
+install libtool
+install pkg-config
+install sbt
+install webkit2png
+install youtube-dl
+
+
+install brew-cask
+
+cask install alfred
+cask install appcleaner
+cask install coconutbattery
+cask install dropbox
+cask install eclipse-ide
+cask install firefox
+cask install flash
+cask install gimp
+cask install github
+cask install google-app-engine-launcher
+cask install google-chrome
+cask install grooveshark
+cask install mou
+cask install onyx
+cask install simple-comic
+cask install skype
+cask install spotify
+cask install transmission
+cask install virtualbox
+cask install vlc
+cask install mactex
+
+cask install sublime-text3
+
+cleanup
