@@ -69,6 +69,7 @@ cp bash_profile ~/.bash_profile
 cp vimrc ~/.vimrc
 cp gitignore ~/.gitignore
 cp gitconfig ~/.gitconfig
+cp hushlogin ~/.hushlogin
 
 source ~/.bash_profile
 source osx.sh
