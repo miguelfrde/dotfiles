@@ -33,10 +33,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Check for software updates daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-# Menu bar: hide the Time Machine icon
-defaults write ~/Library/Preferences/ByHost/com.apple.systemuiserver.* dontAutoLoad -array \
-        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
-
 # Show scrollbars only when scrolling (possible vals: Always, Automatic)
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
@@ -263,13 +259,20 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
+#################################
+#             Alfred            #
+#################################
+
+# Alfred syncfolder = ~/Dropbox
+defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/Dropbox/"
+
 
 #################################
 #       Kill affected apps      #
 #################################
 
 for app in "Finder" "Dock" "Safari" "Mail" "Activity Monitor" "SystemUIServer" \
-           "Transmission"
+           "Transmission" "Alfred"
 do
     killall "$app" > /dev/null 2>&1
 done

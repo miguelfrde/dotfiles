@@ -47,9 +47,8 @@ install sbt
 install webkit2png
 install youtube-dl
 
-
+# General apps
 install brew-cask
-
 cask install alfred
 cask install appcleaner
 cask install coconutbattery
@@ -67,11 +66,16 @@ cask install onyx
 cask install simple-comic
 cask install skype
 cask install spotify
-cask install transmission
+cask install utorrent
 cask install virtualbox
 cask install vlc
 cask install mactex
-
 cask install sublime-text3
+
+# Quicklook plugins
+cask install qlcolorcode
+cask install qlmarkdown
+cask install qlstephen
+cask install quicklook-json
 
 cleanup

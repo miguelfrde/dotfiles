@@ -1,0 +1,31 @@
+#!/bin/bash
+
+export PATH=/usr/local/opt/ruby/bin:/usr/local/bin:$PATH
+
+# Link Homebrew apps to /Applications, not the default ~/Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications" 
+
+# Always show colors
+export CLICOLOR=1
+
+# Colors for ls
+#   - Directory -> cyan
+#   - Symlink -> magenta
+#   - Socket -> bold green
+#   - Pipe -> yellow
+#   - Executable -> bold red
+#   - Block device, character device, 
+#     executable with setuid set, executable with setguid set,
+#     directory writable by others, with/without sticky bit
+#     -> default colors
+# default: exfxcxdxbxegedabagacad
+export LSCOLORS=gxFxCxDxBxegedabagacad
+
+# Make Sublime Text default editor
+export EDITOR='sublime -w'
+
+# Don't show duplicates on 'history' and ignore commands starting with ' '
+export HISTCONTROL=ignoreboth
+
+# Use Homebrew's directories rather than ~/.rbenv
+export RBENV_ROOT=/usr/local/var/rbenv

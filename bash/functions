@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Update OSX and brew
+function update() {
+    echo "Find Apple software updates"
+    sudo softwareupdate -i -a
+    echo "Update brew and its packages"
+    brew update
+    brew upgrade
+    brew cleanup
+    echo "Update gems"
+    sudo gem update --system
+    sudo gem update
+}
+
+# Create a new directory and cd into it
+function mkd() {
+    mkdir -p "$1" && cd "$1"
+}
+

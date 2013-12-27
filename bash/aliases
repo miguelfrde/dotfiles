@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+
+# Always ls showing colors
+alias ls='ls -G'
+
+# Like ls -la, but with directories first
+alias ll='tree --dirsfirst -ChFupDaLg 1'
+
+# Grep coloring matches
+alias grep='grep --color=auto'
+
+# View current IP
+alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+
+# View local IP
+alias localip="ipconfig getifaddr en1"
+
+# View size of current directory
+alias d="du -h -d=1"
+
+# Used to connect to Raspberry Pi
+alias rpi='ssh 192.168.2.2 -l pi' 
+
+# Use hub
+alias git=hub
+
+# Open current directory with Sublime Text
+alias s='sublime .'
+
+# Show current directory on Finder
+alias cdf='open .'
