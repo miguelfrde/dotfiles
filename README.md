@@ -27,13 +27,13 @@ Install
 
 Using git:
 ```
-$ git clone https://github.com/miguelfrde/dotfiles && cd dotfiles && sh install.sh
+$ git clone https://github.com/miguelfrde/dotfiles && cd dotfiles && source install.sh
 ```
 
 Without git:
 ```
 $ curl -L -o tmp.zip https://github.com/miguelfrde/dotfiles/archive/master.zip && unzip -q tmp.zip && rm tmp.zip
-$ cd dotfiles-master && sh install.sh
+$ cd dotfiles-master && source install.sh
 ```
 
 This repo was inspired in part by Mathias Bynens' great [dotfiles](https://github.com/mathiasbynens/dotfiles).
