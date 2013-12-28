@@ -1,5 +1,6 @@
 {
-	"color_scheme": "Packages/User/Neon (SL).tmTheme",
+	"theme": "Spacegray.sublime-theme",
+	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
@@ -36,6 +37,5 @@
 	"soda_classic_tabs": false,
 	"soda_folder_icons": true,
 	"tab_size": 4,
-	"translate_tabs_to_spaces": true,
-	"theme": "Soda Dark 3.sublime-theme"
+	"translate_tabs_to_spaces": true
 }

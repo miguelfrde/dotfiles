@@ -7,6 +7,9 @@ tap samueljohn/python
 tap phinze/homebrew-cask
 tap caskroom/versions
 
+# Homebrew external commands
+install brew-cask
+
 # Languages
 install clisp
 install haskell-platform
@@ -14,6 +17,9 @@ install python
 install python3
 install ruby
 install scala --with-docs
+cask install java6
+cask install java
+cask install mactex
 
 # Databases
 install sqlite
@@ -47,35 +53,52 @@ install sbt
 install webkit2png
 install youtube-dl
 
-# General apps
-install brew-cask
-cask install alfred
-cask install appcleaner
-cask install coconutbattery
-cask install dropbox
-cask install eclipse-ide
-cask install firefox
-cask install flash
-cask install gimp
-cask install github
-cask install google-app-engine-launcher
-cask install google-chrome
-cask install grooveshark
-cask install mou
-cask install onyx
-cask install simple-comic
-cask install skype
-cask install spotify
-cask install utorrent
-cask install virtualbox
-cask install vlc
-cask install mactex
-cask install sublime-text3
-
 # Quicklook plugins
 cask install qlcolorcode
 cask install qlmarkdown
 cask install qlstephen
 cask install quicklook-json
+
+########
+# Apps #
+########
+
+# Browsers
+cask install firefox
+cask install google-chrome
+
+# Communication
+cask install skype
+
+# Development
+cask install eclipse-ide
+cask install github
+cask install google-app-engine-launcher
+cask install mou
+cask install sublime-text3
+
+# Entertainment
+cask install grooveshark
+cask install groovesquid
+cask install simple-comic
+cask install spotify
+
+# Image and video
+cask install gimp
+cask install vlc
+
+# Torrents
+cask install utorrent
+
+# Utilities
+cask install alfred
+cask install appcleaner
+cask install coconutbattery
+cask install dropbox
+cask install flash
+cask install onyx
+
+# Virtual Machines
+cask install virtualbox
 
 cleanup

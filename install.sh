@@ -25,7 +25,6 @@ fi
 clear
 
 SETUP_DIR="$(pwd)"
-JAVA_URL="http://download.oracle.com/otn-pub/java/jdk/7u45-b18/jdk-7u45-macosx-x64.dmg"
 
 echo_title "Homebrew"
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
@@ -55,16 +54,6 @@ sudo gem install bundler
 sudo bundle install
 cd $SETUP_DIR
 echo_done "Gem stuff"
-
-echo_title "Java 1.7"
-# Thanks to: https://gist.github.com/hgomez/4697585
-curl -L --header "Cookie: s_nr=1388004420389; s_cc=true; gpw_e24='http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk7-downloads-1880260.html; s_sq=%5B%5BB%5D%5D" \
-    $JAVA_URL -o tmp.dmg
-hdiutil attach -mountpoint ./tmp_installer tmp.dmg
-sudo installer -pkg ./tmp_installer/*.pkg -target /
-hdiutil detach ./tmp_installer
-rm tmp.dmg
-echo_done "Java 1.7"
 
 echo_title "Sublime configuration"
 source sublime/sublime-setup.sh
