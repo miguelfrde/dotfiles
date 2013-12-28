@@ -22,6 +22,20 @@ Included
 
 - sublime/*: Sublime Text preferences file, ST Package Manager settings file and a script to install ST Package Manager and setup Sublime Text.
 
+
+
+Install
+-------
+
+Using git:
+```
+$ git clone https://github.com/miguelfrde/dotfiles && cd dotfiles && sh install.sh
+```
+
+Without git:
+```
+$ curl -L -o tmp.zip https://github.com/miguelfrde/dotfiles/archive/master.zip && unzip -q tmp.zip && rm tmp.zip
+$ cd dotfiles-master && sh install.sh
+```
+
 This repo was inspired in part by Mathias Bynens' great [dotfiles](https://github.com/mathiasbynens/dotfiles).
-
-
