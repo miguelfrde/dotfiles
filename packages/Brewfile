@@ -3,7 +3,6 @@ upgrade
 
 tap homebrew/versions
 tap homebrew/science
-tap samueljohn/python
 tap phinze/homebrew-cask
 tap caskroom/versions
 
@@ -47,11 +46,13 @@ install pyqt
 install graphviz
 install gist
 install heroku-toolbelt
-install libtool
-install pkg-config
 install sbt
 install webkit2png
 install youtube-dl
+
+# Numpy/Scipy/Matplotlib requirements
+install gfortran
+install pkg-config
 
 # Quicklook plugins
 cask install qlcolorcode
@@ -97,6 +98,7 @@ cask install coconutbattery
 cask install dropbox
 cask install flash
 cask install onyx
+cask install shortcat
 
 # Virtual Machines
 cask install virtualbox

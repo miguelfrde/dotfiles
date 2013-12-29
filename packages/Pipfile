@@ -11,3 +11,8 @@ termcolor
 django-polymorphic
 python-social-auth
 pyflakes
+numpy
+scipy
+matplotlib
+ipython
+pillow
