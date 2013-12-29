@@ -20,7 +20,12 @@ Included
 
 - sublime/*: Sublime Text preferences file, ST Package Manager settings file and a script to install ST Package Manager and setup Sublime Text.
 
+Terminal prompt
+---------------
 
+Shows the current branch on the current directory if the directory belongs to a git repository. If the branch is dirty, then it's name will appear yellow, otherwise it will appear green.
+
+!["Pretty terminal"](https://dl.dropboxusercontent.com/u/17055504/prompt.png)
 
 Install
 -------
