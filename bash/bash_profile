@@ -37,4 +37,18 @@ function git_dirty() {
     fi
 }
 
-PS1="\n\[$RED\]\u\[$DGRAY\]@\[$PURPLE\]\h\[$DGRAY\]:\[$ORANGE\]\w\[$DGRAY\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[\$(git_dirty)\]\$(git_branch)\n\[$DGRAY\]\$\[$LGRAY\] "
+# Add a newline before each prompt, but don't add it if it's the first time
+# a prompt is shown or the last command is clear
+function __ps1_newline {
+    local last_cmnd="$(history | tail -n1 | cut -c 8-)"
+    if [ -z "$PS1_NEWLINE" ] || [ "$last_cmnd" = "clear" ]; then
+        PS1_NEWLINE=true
+    else
+        printf '\n'
+    fi
+}
+
+PROMPT_COMMAND='__ps1_newline'
+
+# Prompt
+PS1="\[$RED\]\u\[$DGRAY\]@\[$PURPLE\]\h\[$DGRAY\]:\[$ORANGE\]\w\[$DGRAY\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[\$(git_dirty)\]\$(git_branch)\n\[$DGRAY\]\$\[$LGRAY\] "
