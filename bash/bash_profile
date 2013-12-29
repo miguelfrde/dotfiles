@@ -13,27 +13,28 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     source `brew --prefix`/etc/bash_completion
 fi
 
-# Update branch in prompt
-function update_ps1_git() {
-    color_prompt="\[\e[0;32m\]"
-    color_dirty="\[\e[0;33m\]"
-    color_clean="\[\e[0;36m\]"
-    local branch
-    local git_branch
-    local branch_color
-    local status=$(git status 2> /dev/null | tail -n1 | grep 'nothing to commit')
-    if branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); then
-        git_branch="($branch)"
-    else
-        git_branch=""
-    fi
-    if  [ "$status" = "" ]; then
-        branch_color="$color_dirty" # Changes -> Yellow
-    else
-        branch_color="$color_clean" # No changes -> Cyan
-    fi
-    PS1="$color_prompt\u@\h \W $branch_color$git_branch\[\e[0m\]\$ "
+DRED=$(tput setaf 1)
+RED=$(tput setaf 9)
+PURPLE=$(tput setaf 141) # 141
+ORANGE=$(tput setaf 172) # 176
+DGRAY=$(tput setaf 8)
+YELLOW=$(tput setaf 34) # 45
+GREEN=$(tput setaf 190)
+LGRAY=$(tput setaf 7)
+
+# Get current branch name
+function git_branch() {
+    echo $(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 }
 
-# Always update branch in prompt before running a command
-PROMPT_COMMAND="update_ps1_git; $PROMPT_COMMAND"
+# Check if the current branch is dirty
+function git_dirty() {
+   local status=$(git status 2> /dev/null | tail -n1 | grep 'nothing to commit')
+   if  [ -z "$status" ]; then
+        echo "$GREEN" # No changes
+    else
+        echo "$YELLOW" # Changes
+    fi
+}
+
+PS1="\n\[$RED\]\u\[$DGRAY\]@\[$PURPLE\]\h\[$DGRAY\]:\[$ORANGE\]\w\[$DGRAY\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[\$(git_dirty)\]\$(git_branch)\n\[$DGRAY\]\$\[$LGRAY\] "
