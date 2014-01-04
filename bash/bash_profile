@@ -13,14 +13,16 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     source `brew --prefix`/etc/bash_completion
 fi
 
-DRED=$(tput setaf 1)
-RED=$(tput setaf 9)
-PURPLE=$(tput setaf 141) # 141
-ORANGE=$(tput setaf 172) # 176
-DGRAY=$(tput setaf 8)
-YELLOW=$(tput setaf 34) # 45
-GREEN=$(tput setaf 190)
-LGRAY=$(tput setaf 7)
+if [ "$TERM" = "xterm-256color" ]; then
+    DRED=$(tput setaf 1)
+    RED=$(tput setaf 9)
+    PURPLE=$(tput setaf 141) # 141
+    ORANGE=$(tput setaf 172) # 176
+    DGRAY=$(tput setaf 8)
+    YELLOW=$(tput setaf 34) # 45
+    GREEN=$(tput setaf 190)
+    LGRAY=$(tput setaf 7)
+fi
 
 # Get current branch name
 function git_branch() {

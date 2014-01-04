@@ -9,11 +9,16 @@ tap caskroom/versions
 # Homebrew external commands
 install brew-cask
 
+# Numpy/Scipy/Matplotlib requirements
+install gfortran
+install pkg-config
+
 # Languages
 install clisp
 install haskell-platform
 install python
 install python3
+install r
 install ruby
 install scala --with-docs
 cask install java6
@@ -25,6 +30,7 @@ install sqlite
 install postgres
 
 # Terminal
+install coreutils
 install ack
 install bash-completion
 install tree
@@ -32,6 +38,7 @@ install wget
 
 # VCS
 install git
+install git-flow
 install hub
 
 # Media
@@ -49,10 +56,6 @@ install heroku-toolbelt
 install sbt
 install webkit2png
 install youtube-dl
-
-# Numpy/Scipy/Matplotlib requirements
-install gfortran
-install pkg-config
 
 # Quicklook plugins
 cask install qlcolorcode
@@ -76,6 +79,7 @@ cask install eclipse-ide
 cask install github
 cask install google-app-engine-launcher
 cask install mou
+cask install rstudio
 cask install sublime-text3
 
 # Entertainment
