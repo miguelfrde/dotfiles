@@ -61,6 +61,10 @@ echo_done "Sublime configuration"
 
 echo "===== Set up environment ====="
 
+sudo bash -c "echo /usr/local/bin/bash >> /etc/shells"
+sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+chsh -s /usr/local/bin/bash
+
 copy_dotfiles "bash"
 copy_dotfiles "git"
 cp vimrc ~/.vimrc

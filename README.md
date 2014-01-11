@@ -31,11 +31,13 @@ Install
 -------
 
 Using git:
+
 ```
 $ git clone https://github.com/miguelfrde/dotfiles && cd dotfiles && source install.sh
 ```
 
 Without git:
+
 ```
 $ curl -L -o tmp.zip https://github.com/miguelfrde/dotfiles/archive/master.zip && unzip -q tmp.zip && rm tmp.zip
 $ cd dotfiles-master && source install.sh

@@ -26,10 +26,14 @@ cask install java
 cask install mactex
 
 # Databases
+install mariadb
+install mongodb
+install mysql
 install sqlite
 install postgres
 
 # Terminal
+install bash
 install coreutils
 install ack
 install bash-completion
@@ -72,6 +76,7 @@ cask install firefox
 cask install google-chrome
 
 # Communication
+cask install limechat
 cask install skype
 
 # Development
