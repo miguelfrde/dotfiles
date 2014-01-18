@@ -16,6 +16,7 @@ install pkg-config
 # Languages
 install clisp
 install haskell-platform
+install node
 install python
 install python3
 install r
