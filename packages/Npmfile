@@ -1,0 +1,4 @@
+npm install jshint
+npm install marked
+npm install mustache
+npm install optimist
