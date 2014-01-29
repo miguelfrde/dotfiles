@@ -9,9 +9,10 @@ tap caskroom/versions
 # Homebrew external commands
 install brew-cask
 
-# Numpy/Scipy/Matplotlib requirements
+# Some dependencies
 install gfortran
 install pkg-config
+cask install xquartz
 
 # Languages
 install clisp

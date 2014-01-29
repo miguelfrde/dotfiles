@@ -44,7 +44,7 @@ echo_title "Pip stuff"
 sudo pip install -r packages/Pipfile
 echo_done "Pip stuff"
 
-echo "\n===== Update Ruby Gem and installed gems ====="
+echo_title "Update Ruby Gem and installed gems"
 sudo gem update --system
 sudo gem update
 
@@ -59,20 +59,31 @@ echo_title "Sublime configuration"
 source sublime/sublime-setup.sh
 echo_done "Sublime configuration"
 
-echo "===== Set up environment ====="
+echo "Set up environment"
+
+# As stated in R caveats, do this to use brew R with RStudio
+sudo ln -s "/usr/local/opt/r/R.framework" /Library/Frameworks
 
 sudo bash -c "echo /usr/local/bin/bash >> /etc/shells"
 sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
-chsh -s /usr/local/bin/bash
+sudo bash -c "echo /usr/local/bin/zsh >> /etc/shells"
+sudo bash -c "echo /usr/local/bin/zsh >> /private/etc/shells"
 
+copy_dotfiles "common"
 copy_dotfiles "bash"
 copy_dotfiles "git"
-cp vimrc ~/.vimrc
+copy_dotfiles "zsh"
+mv ~/.miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes/miguelfrde.zsh-theme
 
-source ~/.bash_profile
+#source ~/.bash_profile
+#source ~/.zshrc
 source osx.sh
+
+echo_title "oh-my-zsh!"
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+echo_done "oh-my-zsh!"
 
 echo "Setup finished. You may need to restart the computer."
 read -p "Press [Enter] to exit this utility..."
 
-clear
+exit 0

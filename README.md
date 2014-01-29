@@ -10,18 +10,20 @@ Included
 
 - osx.sh: run it to update preferences of the following apps: Finder, Dock, Safari, Mail, Activity Monitor, Transmission and other OSX settings.
 
-- vimrc: my ~/.vimrc (not a lot of configurations, I use Sublime Text more).
+- common/*: contains exports, useful functions, aliases, my vimrc, my sqliterc and the useful file .hushlogin.
 
-- bash/*: includes all my ~/.bash_profile configuration: exports, aliases, functions and the file .hushlogin.
+- bash/*: includes all my ~/.bash_profile configuration.
+
+- zsh/*: includes my ~/.zshrc and my custom zsh prompt theme.
 
 - git/*: includes my ~/.gitconfig and my ~/.gitignore
 
-- packages/*: install.sh uses the files contained in here to install all gems and pip & brew packages.
+- packages/*: install.sh uses the files contained in here to install all gems and pip, npm & brew packages.
 
 - sublime/*: Sublime Text preferences file, ST Package Manager settings file and a script to install ST Package Manager and setup Sublime Text.
 
-Bash prompt
----------------
+Prompt
+------
 
 Shows the current branch on the current directory if the directory belongs to a git repository. If the branch is dirty, then it's name will appear yellow, otherwise it will appear green.
 

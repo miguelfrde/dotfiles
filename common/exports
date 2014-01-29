@@ -21,11 +21,20 @@ export CLICOLOR=1
 # default: exfxcxdxbxegedabagacad
 export LSCOLORS=gxFxCxDxBxegedabagacad
 
-# Make Sublime Text default editor
-export EDITOR='sublime -w'
+# Sublime default editor, under ssh use vim
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='sublime -w'
+fi
 
 # Don't show duplicates on 'history' and ignore commands starting with ' '
 export HISTCONTROL=ignoreboth
 
 # Use Homebrew's directories rather than ~/.rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
+
+# Grep using a green color
+export GREP_OPTIONS='--color=auto'
+
+export GREP_COLOR='1;32'
