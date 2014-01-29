@@ -55,6 +55,10 @@ sudo bundle install
 cd $SETUP_DIR
 echo_done "Gem stuff"
 
+echo_title "Node packages"
+source packages/Npmfile
+echo_done "Node packages"
+
 echo_title "Sublime configuration"
 source sublime/sublime-setup.sh
 echo_done "Sublime configuration"
