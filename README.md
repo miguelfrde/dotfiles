@@ -6,11 +6,11 @@ My OSX dotfiles configuration.
 Included
 --------
 
-- install.sh: this is the main script, run it to install: Xcode Command Line Tools, Homebrew and its packages, pip and its packages, update Gem and installs some gems, Java 1.7, my Sublime Text configuration and setup the bash environment.
+- install.sh: this is the main script, run it to install: Xcode Command Line Tools, Homebrew and its packages, pip and its packages, update Gem and installs some gems, Java 1.7, my Sublime Text configuration, oh-my-zshell and setup the shell environment.
 
 - osx.sh: run it to update preferences of the following apps: Finder, Dock, Safari, Mail, Activity Monitor, Transmission and other OSX settings.
 
-- common/*: contains exports, useful functions, aliases, my vimrc, my sqliterc and the useful file .hushlogin.
+- common/*: contains exports, useful functions, aliases, my vimrc, my sqliterc and the file .hushlogin.
 
 - bash/*: includes all my ~/.bash_profile configuration.
 
