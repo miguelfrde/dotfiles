@@ -1,6 +1,7 @@
 pyparsing
 ipython
 virtualenv
+virtualenvwrapper
 Flask
 Django
 requests
