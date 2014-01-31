@@ -11,8 +11,7 @@ set wildignore=*.o,*~,*.pyc
 set cmdheight=1
 set ruler
 set number
-syntax enable
-set bg=dark
+syntax on
 set foldcolumn=1
 
 """""""""""SEARCH"""""""""""
