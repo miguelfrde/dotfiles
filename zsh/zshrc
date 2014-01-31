@@ -2,6 +2,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# oh-my-zsh plugins
+plugins=(git autopep8 brew bundler django gem heroku pip python rake ruby scala
+         sbt virtualenv virtualenvwrapper github git-flow sublime)
+
 # Theme to load
 ZSH_THEME="miguelfrde"
 
@@ -9,7 +13,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.exports
 source ~/.aliases
 source ~/.functions
-
-plugins=(git autopep8 brew bundler django gem heroku pip python rake ruby scala
-         sbt virtualenv virtualenvwrapper github git-flow sublime)
 
