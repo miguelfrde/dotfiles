@@ -18,11 +18,11 @@ function get_venv {
     fi
 }
 
-red=$FG[009]
-orange=$FG[172]
-purple=$FG[141]
-yellow=$FG[190]
-green=$FG[034]
+local red=$FG[009]
+local orange=$FG[172]
+local purple=$FG[141]
+local yellow=$FG[190]
+local green=$FG[034]
 
 # Inspired on RobbyRussell theme
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
