@@ -12,6 +12,9 @@ set cmdheight=1
 set ruler
 set number
 syntax on
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 set foldcolumn=1
 
 """""""""""SEARCH"""""""""""
