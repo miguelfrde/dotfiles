@@ -14,13 +14,19 @@ Included
 
 - bash/*: includes all my ~/.bash_profile configuration.
 
-- zsh/*: includes my ~/.zshrc and my custom zsh prompt theme.
+- zsh/*: includes my ~/.zshrc and my custom zsh prompt theme. I also use .
 
 - git/*: includes my ~/.gitconfig and my ~/.gitignore
 
 - packages/*: install.sh uses the files contained in here to install all gems and pip, npm & brew packages.
 
 - sublime/*: Sublime Text preferences file, ST Package Manager settings file and a script to install ST Package Manager and setup Sublime Text.
+
+This will be installed:
+
+- [solarized colorsheme for vim](https://github.com/altercation/vim-colors-solarized)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 Prompt
 ------
