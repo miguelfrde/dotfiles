@@ -4,6 +4,7 @@
 		"All Autocomplete",
 		"ApplySyntax",
 		"BracketHighlighter",
+		"Djaneiro",
 		"Emmet",
 		"Git",
 		"Neon Color Scheme",
@@ -14,6 +15,7 @@
 		"SublimeLinter-pep257",
 		"SublimeLinter-pep8",
 		"SublimeLinter-pyflakes",
-		"Theme - Soda"
+		"Theme - Soda",
+		"Theme - Spacegray"
 	]
 }
