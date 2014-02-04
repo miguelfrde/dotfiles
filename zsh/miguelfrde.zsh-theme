@@ -33,7 +33,7 @@ ${ret_status}\
 %{$reset_color%}@\
 %{$purple%}%m\
 %{$reset_color%}:\
-%{$orange%}%~\
+%{$orange%}%3c\
 %{$reset_color%}\
 \$(git_prompt_info_miguel)\
 %{$reset_color%}
