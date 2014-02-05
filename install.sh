@@ -19,6 +19,7 @@ r="$(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables 2>/dev/null | grep -v 
 
 if [ "$r" == '' ]; then
     echo "Xcode Coommand Line Tools needed. Installing now"
+    xcode-select --install
     exit 1
 fi
 
