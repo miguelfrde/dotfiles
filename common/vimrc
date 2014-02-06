@@ -1,43 +1,85 @@
+" Enable filetype plugins
 filetype plugin on
 filetype indent on
 
+" If a file is changed from the outside, set to autoread
 set autoread
 
 """""INTERFACE, COLORS"""""
 
+" Enable wildmenu: command line completion
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 
+" Command line height
 set cmdheight=1
+
+" Always show current position
 set ruler
+
+" Show line numbers
 set number
+
+" Syntax highlighting
 syntax on
+
+" Dark background
 set background=dark
+
+" Solarized color scheme configuration
 let g:solarized_termcolors=256
 colorscheme solarized
+
 set foldcolumn=1
 
 """""""""""SEARCH"""""""""""
 
+" Highlight search
 set hlsearch
+
+" Ignore case when searching
 set ignorecase
+
+" When searching, be smart about cases
 set smartcase
+
+" Make search act like search in browsers
 set incsearch
+
+" For better regular expressions
 set magic
 
 """"""""TEXT, EDITING"""""""
 
+" Make backspace act as it should
 set backspace=eol,start,indent
+
+" Wrap lines
 set wrap
+
+" Encoding
 set encoding=utf8
+
+" Unix = standard filetype
 set ffs=unix,mac,dos
 
-set shiftwidth=4                                                                       
-set tabstop=4 
+" Tabs are 4 spaces
+set shiftwidth=4
+set tabstop=4
 set expandtab
+
+" Be smart when using tabs
 set smarttab
+
+" Auto and smart indent
 set autoindent
 set smartindent
 
 map j gj "For long lines
 map k gk
+
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-h> <C-w><C-h>
+
