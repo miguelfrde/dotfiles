@@ -32,7 +32,8 @@ set wrap
 set encoding=utf8
 set ffs=unix,mac,dos
 
-set ts=4
+set shiftwidth=4                                                                       
+set tabstop=4 
 set expandtab
 set smarttab
 set autoindent
