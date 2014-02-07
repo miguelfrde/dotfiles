@@ -1,6 +1,24 @@
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
+" vundlen plugin
+set nocompatible              " be iMproved
+filetype off                  " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let vundle manage vundle
+Bundle 'gmarik/vundle'
+
+"""""Plugins (Github)"""""
+
+" Taglist plugin: show functions, etc
+Bundle 'vim-scripts/taglist.vim'
+" Most recent files plugin
+Bundle 'vim-scripts/mru.vim'
+" NerdTree
+Bundle 'scrooloose/nerdtree'
+" Syntax checking
+Bundle 'scrooloose/syntastic'
+
+filetype plugin indent on
 
 " If a file is changed from the outside, set to autoread
 set autoread
@@ -63,7 +81,7 @@ set encoding=utf8
 " Unix = standard filetype
 set ffs=unix,mac,dos
 
-" Tabs are 4 spaces
+" abs are 4 spaces
 set shiftwidth=4
 set tabstop=4
 set expandtab

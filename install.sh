@@ -76,31 +76,18 @@ sudo bash -c "echo /usr/local/bin/zsh >> /private/etc/shells"
 
 echo_done "some configurations"
 
-echo_title "oh-my-zsh!"
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-echo_done "oh-my-zsh"
+echo_title "zsh stuff"
+source zsh/zsh-setup.sh
+echo_done "zsh stuff"
 
-echo_title "zsh stuff: miguelfrde theme and zsh-syntax-highlighting"
-mkdir ~/.oh-my-zsh/custom/themes
-mkdir ~/.oh-my-zsh/custom/plugins 
-mkdir ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-mv ~/.miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes/miguelfrde.zsh-theme
-cd ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting
-cd $SETUP_DIR
-echo_done "zsh stuff: miguelfrde theme and zsh-syntax-highlighting"
-
-echo_title "vim stuff"
-mkdir -p ~/.vim/colors
-curl -o solarized.vim https://raw2.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-mv solarized.vim ~/.vim/colors
-echo_done "vim stuff"
+echo_title "Vim stuff"
+source vim/vim-setup.sh
+echo_done "Vim stuff"
 
 echo_title "dotfiles"
 copy_dotfiles "common"
 copy_dotfiles "bash"
 copy_dotfiles "git"
-copy_dotfiles "zsh"
 echo_done "dotfiles"
 
 #source ~/.bash_profile
