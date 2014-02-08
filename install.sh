@@ -90,9 +90,6 @@ copy_dotfiles "bash"
 copy_dotfiles "git"
 echo_done "dotfiles"
 
-#source ~/.bash_profile
-#source ~/.zshrc
-
 echo_title "OSX configurations"
 source osx.sh
 echo_done "OSX configurations"
