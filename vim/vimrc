@@ -17,6 +17,12 @@ Bundle 'vim-scripts/mru.vim'
 Bundle 'scrooloose/nerdtree'
 " Syntax checking
 Bundle 'scrooloose/syntastic'
+" Python autocompletion
+Bundle 'davidhalter/jedi-vim'
+" Toggle comments, etc
+Bundle 'tomtom/tcomment_vim'
+" Similar to taglist, but with scope ordering
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on
 

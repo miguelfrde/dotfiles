@@ -33,6 +33,9 @@ This will be installed along with many python, node and brew packages, casks and
 - [mru.vim](https://github.com/vim-scripts/mru.vim)
 - [NerdTREE](https://github.com/scrooloose/nerdtree)
 - [syntastic](https://github.com/scrooloose/syntastic)
+- [jedi-vim](https://github.com/davidhalter/jedi-vim)
+- [tcomment](https://github.com/tomtom/tcomment_vim)
+- [tagbar](https://github.com/majutsushi/tagbar)
 
 Prompt
 ------
