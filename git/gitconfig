@@ -4,7 +4,7 @@
 [core]
     quotepath    = false
     excludesfile = ~/.gitignore
-    editor       = sublime -w
+    editor       = vim
 [alias]
     ci = commit
     co = checkout
