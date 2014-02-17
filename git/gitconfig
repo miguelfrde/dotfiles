@@ -2,9 +2,10 @@
     name = Miguel Flores Ruiz de Eguino
     email = miguel.frde@gmail.com
 [core]
-    quotepath    = false
+	quotepath = false
     excludesfile = ~/.gitignore
-    editor       = vim
+    editor  = vim
+	autocrlf = true
 [alias]
     ci = commit
     co = checkout
@@ -13,10 +14,10 @@
 [color]
     ui = true
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red reverse
-    new = green reverse
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
     whitespace = white reverse
 [color "status"]
     added = yellow
@@ -24,6 +25,11 @@
     untracked = red
     branch = magenta
 [color "branch"]
-    current = yellow bold
-    local = green bold
-    remote = magenta bold
+    current = yellow
+    local = green
+    remote = magenta
+[hub]
+	protocol = https
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
