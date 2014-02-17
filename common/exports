@@ -38,3 +38,7 @@ export RBENV_ROOT=/usr/local/var/rbenv
 export GREP_OPTIONS='--color=auto'
 
 export GREP_COLOR='1;32'
+
+# Zsh terminal title
+export ZSH_THEME_TERM_TAB_TITLE_IDLE="%c"
+export ZSH_THEME_TERM_TITLE_IDLE="%n@%m %5c"
