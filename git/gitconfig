@@ -5,7 +5,6 @@
 	quotepath = false
     excludesfile = ~/.gitignore
     editor  = vim
-	autocrlf = true
 [alias]
     ci = commit
     co = checkout
