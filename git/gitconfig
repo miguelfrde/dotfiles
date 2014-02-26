@@ -5,6 +5,7 @@
 	quotepath = false
     excludesfile = ~/.gitignore
     editor  = vim
+	autocrlf = false
 [alias]
     ci = commit
     co = checkout
@@ -32,3 +33,5 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[credential]
+	helper = osxkeychain
