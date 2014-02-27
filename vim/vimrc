@@ -23,6 +23,8 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'tomtom/tcomment_vim'
 " Similar to taglist, but with scope ordering
 Bundle 'majutsushi/tagbar'
+" Sublime Text Ctrl-D
+Bundle 'terryma/vim-multiple-cursors'
 
 filetype plugin indent on
 
@@ -53,7 +55,6 @@ set background=dark
 " Solarized color scheme configuration
 let g:solarized_termcolors=256
 colorscheme solarized
-
 set foldcolumn=1
 
 """""""""""SEARCH"""""""""""

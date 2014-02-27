@@ -24,18 +24,6 @@ Included
 
 - sublime/*: Sublime Text preferences file, ST Package Manager settings file and a script to install ST Package Manager and setup Sublime Text.
 
-This will be installed along with many python, node and brew packages, casks and gems:
-
-- [solarized colorsheme for vim](https://github.com/altercation/vim-colors-solarized)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- [taglist.vim](https://github.com/vim-scripts/taglist.vim)
-- [mru.vim](https://github.com/vim-scripts/mru.vim)
-- [NerdTREE](https://github.com/scrooloose/nerdtree)
-- [syntastic](https://github.com/scrooloose/syntastic)
-- [jedi-vim](https://github.com/davidhalter/jedi-vim)
-- [tcomment](https://github.com/tomtom/tcomment_vim)
-- [tagbar](https://github.com/majutsushi/tagbar)
 
 Prompt
 ------
