@@ -21,12 +21,8 @@ export CLICOLOR=1
 # default: exfxcxdxbxegedabagacad
 export LSCOLORS=gxFxCxDxBxegedabagacad
 
-# Sublime default editor, under ssh use vim
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
-else
-    export EDITOR='sublime -w'
-fi
+# Default editor -> Vim
+export EDITOR='vim'
 
 # Don't show duplicates on 'history' and ignore commands starting with ' '
 export HISTCONTROL=ignoreboth
