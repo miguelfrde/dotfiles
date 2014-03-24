@@ -44,3 +44,5 @@ alias vimrc='vim ~/.vimrc'
 # dropbox
 alias dbox='cd ~/Dropbox'
 
+# node-webkit
+alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
