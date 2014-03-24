@@ -109,6 +109,7 @@ cask install appcleaner
 cask install coconutbattery
 cask install dropbox
 cask install flash
+cask install google-hangouts
 cask install iterm2
 cask install ntfs-free
 cask install onyx
