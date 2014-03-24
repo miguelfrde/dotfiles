@@ -1,5 +1,4 @@
 {
-	"theme": "Spacegray.sublime-theme",
 	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
@@ -31,11 +30,13 @@
 	[
 		80
 	],
+	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"soda_classic_tabs": false,
 	"soda_folder_icons": true,
 	"tab_size": 4,
+	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"scroll_past_end": true
+	"trim_trailing_white_space_on_save": true
 }
