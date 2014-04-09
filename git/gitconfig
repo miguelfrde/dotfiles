@@ -9,6 +9,8 @@
 [alias]
     ci = commit
     co = checkout
+	g = grep --break --heading --line-number
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 [web]
     browser = google-chrome
 [color]
@@ -37,3 +39,4 @@
 	helper = osxkeychain
 [grep]
 	extendRegexp = true
+	lineNumber = true
