@@ -8,7 +8,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 # oh-my-zsh plugins
 plugins=(git autopep8 brew bundler django gem heroku pip
          python rake ruby scala sbt virtualenv virtualenvwrapper
-         git-flow sublime zsh-syntax-highlighting)
+         git-flow sublime zsh-syntax-highlighting brew-cask)
 
 # Theme to load
 ZSH_THEME="miguelfrde"
