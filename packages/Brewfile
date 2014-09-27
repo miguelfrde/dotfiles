@@ -57,6 +57,7 @@ install pypy
 install pyqt
 
 # Other
+install cmake
 install graphviz
 install gist
 install heroku-toolbelt

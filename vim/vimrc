@@ -2,30 +2,33 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " Let vundle manage vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 """""Plugins (Github)"""""
 
 " Taglist plugin: show functions, etc
-Bundle 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/taglist.vim'
 " Most recent files plugin
-Bundle 'vim-scripts/mru.vim'
+Plugin 'vim-scripts/mru.vim'
 " NerdTree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " Syntax checking
-Bundle 'scrooloose/syntastic'
-" Python autocompletion
-Bundle 'davidhalter/jedi-vim'
+Plugin 'scrooloose/syntastic'
 " Toggle comments, etc
-Bundle 'tomtom/tcomment_vim'
+Plugin 'tomtom/tcomment_vim'
 " Similar to taglist, but with scope ordering
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " Sublime Text Ctrl-D
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
+" Code completion
+Plugin 'Valloric/YouCompleteMe'
+" Go plugin
+Plugin 'fatih/vim-go'
 
+call vundle#end()
 filetype plugin indent on
 
 " If a file is changed from the outside, set to autoread
