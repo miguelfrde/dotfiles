@@ -41,6 +41,9 @@ alias cdf='open .'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
+# Start vim with NERDTree always
+alias vim='vim +NERDTree'
+
 # dropbox
 alias dbox='cd ~/Dropbox'
 
