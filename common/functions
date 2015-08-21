@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Update OSX
 function update_osx() { 
     echo "Find Apple software updates"

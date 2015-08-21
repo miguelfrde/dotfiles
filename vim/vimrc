@@ -1,20 +1,23 @@
-" vundlen plugin
-set nocompatible              " be iMproved
-filetype off                  " required!
-set rtp+=~/.vim/bundle/vundle/
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#end()
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let vundle manage vundle
 Plugin 'gmarik/Vundle.vim'
 
 """""Plugins (Github)"""""
-
 " Taglist plugin: show functions, etc
 Plugin 'vim-scripts/taglist.vim'
 " Most recent files plugin
 Plugin 'vim-scripts/mru.vim'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
+" Jedi Vim
+Plugin 'davidhalter/jedi-vim'
 " Syntax checking
 Plugin 'scrooloose/syntastic'
 " Toggle comments, etc
@@ -23,10 +26,36 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'majutsushi/tagbar'
 " Sublime Text Ctrl-D
 Plugin 'terryma/vim-multiple-cursors'
-" Code completion
-Plugin 'Valloric/YouCompleteMe'
-" Go plugin
-Plugin 'fatih/vim-go'
+" Git
+Plugin 'tpope/vim-fugitive'
+" vim-trailing-whitespace
+Plugin 'bronson/vim-trailing-whitespace'
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+" Flake8
+Plugin 'nvie/vim-flake8'
+" Status bar
+Plugin 'bling/vim-airline'
+" Git diff in the gutter
+Plugin 'airblade/vim-gitgutter'
+" Virtualenv
+Plugin 'jmcantrell/vim-virtualenv'
+" Base16 colorscheme
+Plugin 'chriskempson/base16-vim'
+" Bufferline (open files)
+Plugin 'bling/vim-bufferline'
+" Automatic parentheses, brackets, etc
+Plugin 'Raimondi/delimitMate'
+" Expand region selection
+Plugin 'terryma/vim-expand-region'
+" Replace/insert surrounding characters
+Plugin 'tpope/vim-surround'
+" Javascript and React
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,9 +84,11 @@ syntax on
 " Dark background
 set background=dark
 
-" Solarized color scheme configuration
-let g:solarized_termcolors=256
-colorscheme solarized
+" Base16 colorscheme
+set t_Co=256
+let base16colorspace=256
+colorscheme base16-ocean
+
 set foldcolumn=1
 
 """""""""""SEARCH"""""""""""
@@ -103,11 +134,38 @@ set smarttab
 set autoindent
 set smartindent
 
-map j gj "For long lines
-map k gk
+" Cursor in the middle of the screen when possible
+set scrolloff=999
 
+" Move through splits
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-h> <C-w><C-h>
 
+" Cycle through buffers
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
+
+" Mouse
+set mouse=a
+
+" ctags
+set tags=$HOME/.tags
+
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
+
+" Highlight current line and column
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16'
+
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype c setlocal ts=2 sts=2 sw=2

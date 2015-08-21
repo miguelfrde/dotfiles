@@ -1,14 +1,16 @@
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+
+source ~/.exports
 
 # For virtualenvwrapper to work properly
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 
 # oh-my-zsh plugins
-plugins=(git autopep8 brew bundler django gem heroku pip
+plugins=(brew bundler django gem git heroku pip
          python rake ruby scala sbt virtualenv virtualenvwrapper
-         git-flow sublime zsh-syntax-highlighting brew-cask)
+         sublime zsh-syntax-highlighting brew-cask github
+         docker)
 
 # Theme to load
 ZSH_THEME="miguelfrde"
@@ -16,8 +18,38 @@ ZSH_THEME="miguelfrde"
 # Zsh-syntax-highlighting pluginn
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 source $ZSH/oh-my-zsh.sh
-source ~/.exports
 source ~/.aliases
 source ~/.functions
 
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/miguelfrde/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/miguelfrde/google-cloud-sdk/completion.zsh.inc'
+
+# CTRL Z nice
+fancy-ctrl-z() {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+
+zle -N fancy-ctrl-z
+bindkey '' fancy-ctrl-z
+
+eval "$(thefuck --alias)"
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL

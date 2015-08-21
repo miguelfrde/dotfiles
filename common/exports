@@ -1,9 +1,13 @@
-#!/bin/bash
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
-export PATH=/usr/local/opt/ruby/bin:/usr/local/bin:$PATH
+# For virtualenvwrapper to work properly
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 
-# Link Homebrew apps to /Applications, not the default ~/Applications
-export HOMEBREW_CASK_OPTS="--appdir=/Applications" 
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+  export TERM='xterm-256color'
+else
+  export TERM='xterm-color'
+fi
 
 # Always show colors
 export CLICOLOR=1
@@ -27,9 +31,6 @@ export EDITOR='vim'
 # Don't show duplicates on 'history' and ignore commands starting with ' '
 export HISTCONTROL=ignoreboth
 
-# Use Homebrew's directories rather than ~/.rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-
 # Grep using a green color
 export GREP_OPTIONS='--color=auto'
 
@@ -38,3 +39,11 @@ export GREP_COLOR='1;32'
 # Zsh terminal title
 export ZSH_THEME_TERM_TAB_TITLE_IDLE="%c"
 export ZSH_THEME_TERM_TITLE_IDLE="%n@%m %5c"
+
+# App Engine stuff
+export GAE="/usr/local/google_appengine"
+export PYTHONPATH="$PYTHONPATH:$GAE:$GAE/lib/django-1.5"
+export PATH="$PATH:$GAE/lib/django-1.5/django/bin/"
+
+# Rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
