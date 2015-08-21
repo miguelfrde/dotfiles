@@ -10,6 +10,5 @@ echo "Installing zsh miguelfrde theme..."
 mkdir ~/.oh-my-zsh/custom/themes
 mv miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes/miguelfrde.zsh-theme
 
-echo "Copying .zshrc..."
-cp zshrc ~/.zshrc
-
+echo "Linking .zshrc..."
+ln -sf `pwd`/zsh/zshrc ~/.zshrc

@@ -8,10 +8,10 @@ function echo_done() {
     echo "$1 installed!"
 }
 
-function copy_dotfiles() {
+function link_dotfiles() {
     local dir=$1
     for file in $(ls $dir); do
-        cp $dir/$file ~/.$file
+        ln -sf `pwd`/$dir/$file ~/.$file
     done
 }
 
@@ -85,9 +85,9 @@ source vim/vim-setup.sh
 echo_done "Vim stuff"
 
 echo_title "dotfiles"
-copy_dotfiles "common"
-copy_dotfiles "bash"
-copy_dotfiles "git"
+link_dotfiles "common"
+link_dotfiles "bash"
+link_dotfiles "git"
 echo_done "dotfiles"
 
 echo_title "OSX configurations"

@@ -4,8 +4,8 @@ mkdir -p ~/.vim/colors
 curl -o solarized.vim https://raw2.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 mv solarized.vim ~/.vim/colors
 
-echo "Copying .vimrc..."
-cp vimrc ~/.vimrc
+echo "Linking .vimrc..."
+ln -sf `pwd`/vim/vimrc ~/.vimrc
 
 echo "Installing vundle and vim plugins..."
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
