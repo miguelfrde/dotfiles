@@ -43,7 +43,7 @@ export ZSH_THEME_TERM_TITLE_IDLE="%n@%m %5c"
 # App Engine stuff
 export GAE="/usr/local/google_appengine"
 export PYTHONPATH="$PYTHONPATH:$GAE:$GAE/lib/django-1.5"
-export PATH="$PATH:$GAE/lib/django-1.5/django/bin/"
+export PATH="$PATH:$GAE/lib/django-1.5/django/bin"
 
 # Rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
