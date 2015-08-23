@@ -54,6 +54,11 @@ Plugin 'tpope/vim-surround'
 " Javascript and React
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+" CtrlP
+Plugin 'kien/ctrlp.vim'
+" Nice Zen mode for Markdown
+Plugin 'junegunn/goyo.vim'
+Plugin 'amix/vim-zenroom2'
 
 call vundle#end()
 filetype plugin indent on
@@ -167,3 +172,5 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype c setlocal ts=2 sts=2 sw=2
+autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype scss setlocal ts=2 sts=2 sw=2
