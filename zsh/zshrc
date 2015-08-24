@@ -9,8 +9,7 @@ source ~/.exports
 # oh-my-zsh plugins
 plugins=(brew bundler django gem git heroku pip
          python rake ruby scala sbt virtualenv virtualenvwrapper
-         sublime zsh-syntax-highlighting brew-cask github
-         docker)
+         brew-cask github docker zsh-syntax-highlighting)
 
 # Theme to load
 ZSH_THEME="miguelfrde"
