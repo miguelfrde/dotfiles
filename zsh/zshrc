@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# For hub zsh completion
+fpath=(~/.zsh $fpath)
+
 source ~/.exports
 
 # oh-my-zsh plugins
