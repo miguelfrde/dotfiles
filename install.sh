@@ -28,31 +28,28 @@ clear
 SETUP_DIR="$(pwd)"
 
 echo_title "Homebrew"
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-export PATH="/usr/local/bin:/usr/local/share/python:$PATH"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+export PATH="/usr/local/bin:$PATH"
 echo_done "Homebrew"
-
-echo_title "Homebrew stuff"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew bundle packages/Brewfile
-brew unlink ruby
-brew link ruby
-brew cask alfred link
-brew linkapps
-echo_done "Homebrew stuff"
 
 echo_title "Pip stuff"
 sudo pip install -r packages/Pipfile
 echo_done "Pip stuff"
 
+echo_title "Ruby"
+brew install rbenv ruby-build
+rbenv install 2.2.2
+rbenv global 2.2.2
+echo_done "Ruby"
+
 echo_title "Update Ruby Gem and installed gems"
-sudo gem update --system
-sudo gem update
+gem update --system
+gem update
 
 echo_title "Gem stuff"
 cd packages
-sudo gem install bundler
-sudo bundle install
+gem install bundler
+bundle install
 cd $SETUP_DIR
 echo_done "Gem stuff"
 
@@ -60,21 +57,13 @@ echo_title "Node packages"
 source packages/Npmfile
 echo_done "Node packages"
 
-echo_title "Sublime configuration"
-source sublime/sublime-setup.sh
-echo_done "Sublime configuration"
-
-echo_title "some configurations"
-
-# As stated in R caveats, do this to use brew R with RStudio
-sudo ln -s "/usr/local/opt/r/R.framework" /Library/Frameworks
-
-sudo bash -c "echo /usr/local/bin/bash >> /etc/shells"
-sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+echo_title "Some configurations"
 sudo bash -c "echo /usr/local/bin/zsh >> /etc/shells"
 sudo bash -c "echo /usr/local/bin/zsh >> /private/etc/shells"
-
-echo_done "some configurations"
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+git clone https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.256.itermcolors ~/Desktop
+echo "NOTE: The iTerm theme is in your desktop, load the profile on iTerm to install it..."
+echo_done "Some configurations"
 
 echo_title "zsh stuff"
 source zsh/zsh-setup.sh
@@ -86,7 +75,6 @@ echo_done "Vim stuff"
 
 echo_title "dotfiles"
 link_dotfiles "common"
-link_dotfiles "bash"
 link_dotfiles "git"
 echo_done "dotfiles"
 

@@ -1,14 +1,17 @@
-
 echo "Installing oh-my-zsh..."
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing zsh-syntax-highlighting..."
-mkdir ~/.oh-my-zsh/custom/plugins 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins
+mkdir -p ~/.oh-my-zsh/custom/plugins
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins
 
 echo "Installing zsh miguelfrde theme..."
-mkdir ~/.oh-my-zsh/custom/themes
+mkdir -p ~/.oh-my-zsh/custom/themes
 mv miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes/miguelfrde.zsh-theme
+
+echo "Installing hub completion.."
+mkdir -p .zsh
+curl https://github.com/github/hub/blob/master/etc/hub.zsh_completion >  ~/.zsh/_hub
 
 echo "Linking .zshrc..."
 ln -sf `pwd`/zsh/zshrc ~/.zshrc
