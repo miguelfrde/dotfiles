@@ -24,9 +24,7 @@ Included
 Prompt
 ------
 
-Shows the current branch on the current directory if the directory belongs to a git repository. If the branch is dirty, then it's name will appear yellow, otherwise it will appear green.
-
-!["Pretty terminal"](https://dl.dropboxusercontent.com/u/17055504/prompt.png)
+Shows the current branch on the current directory if the directory belongs to a git repository. If the branch is dirty, then it's name will appear yellow, otherwise it will appear green. It also shows the active Python virtual environment if there's one.
 
 Install
 -------

@@ -7,7 +7,7 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/cu
 
 echo "Installing zsh miguelfrde theme..."
 mkdir -p ~/.oh-my-zsh/custom/themes
-mv miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes/miguelfrde.zsh-theme
+cp miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes
 
 echo "Installing hub completion.."
 mkdir -p .zsh
