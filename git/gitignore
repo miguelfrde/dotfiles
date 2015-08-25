@@ -28,6 +28,7 @@
 *.temp
 *.log
 *.swp
+tags
 
 # Compressed files
 *.zip
