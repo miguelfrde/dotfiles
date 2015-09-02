@@ -35,3 +35,14 @@ function mkd() {
 function update_pip() {
     pip freeze | cut -d = -f 1 | xargs pip install -U
 }
+
+# Get personal MIT license
+function mit_license() {
+    local name="Miguel Flores Ruiz de Eguino"
+    local url="http://www.miguelfrde.com/"
+    local email="miguel.frde@gmail.com"
+    local miturl="http://miguelfrde.mit-license.org"
+    local json='{"copyright": "${name}", "url": "${url}", "email": "${email}", "format": "txt" }'
+    curl -d ${json} ${miturl} > /dev/null 2>&1
+    curl -s ${miturl} > $1
+}
