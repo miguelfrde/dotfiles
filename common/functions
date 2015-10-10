@@ -46,3 +46,7 @@ function mit_license() {
     curl -d ${json} ${miturl} > /dev/null 2>&1
     curl -s ${miturl} > $1
 }
+
+function docker-ip() {
+    docker-machine ip default 2>/dev/null
+}
