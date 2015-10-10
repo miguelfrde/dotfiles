@@ -59,6 +59,10 @@ Plugin 'kien/ctrlp.vim'
 " Nice Zen mode for Markdown
 Plugin 'junegunn/goyo.vim'
 Plugin 'amix/vim-zenroom2'
+" Emmet
+Plugin 'mattn/emmet-vim'
+" Vim
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -168,9 +172,15 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype erb setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype c setlocal ts=2 sts=2 sw=2
+autocmd Filetype h setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+
+let NERDTreeIgnore = ['^__pycache__$', '\.pyc$']
+
+let g:syntastic_python_python_exec = system('which python')
