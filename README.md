@@ -18,7 +18,7 @@ Included
 
 - git/*: includes my ~/.gitconfig and my ~/.gitignore
 
-- packages/*: install.sh uses the files contained in here to install all gems and pip, npm & brew packages. BREW OUTDATED.
+- packages/*: install.sh uses the files contained in here to install all gems and pip, npm & brew packages.
 
 
 Prompt
