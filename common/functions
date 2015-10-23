@@ -50,3 +50,8 @@ function mit_license() {
 function docker-ip() {
     docker-machine ip default 2>/dev/null
 }
+
+function clean_docker() {
+    docker rm -v $(docker ps -a -q -f status=exited) > /dev/null 2>&1
+    docker rmi $(docker images -f "dangling=true" -q)
+}

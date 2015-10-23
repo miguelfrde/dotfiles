@@ -58,3 +58,5 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 
 export NVM_DIR="/Users/miguelfrde/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+source /usr/local/share/zsh/site-functions/_aws
