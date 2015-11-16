@@ -48,3 +48,6 @@ export PATH="$PATH:$GAE/lib/django-1.5/django/bin"
 
 # Rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
+
+# Andorid
+export ANDROID_HOME=/usr/local/opt/android-sdk

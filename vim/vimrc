@@ -63,6 +63,8 @@ Plugin 'amix/vim-zenroom2'
 Plugin 'mattn/emmet-vim'
 " Vim
 Plugin 'editorconfig/editorconfig-vim'
+" Typescript
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -180,6 +182,7 @@ autocmd Filetype c setlocal ts=2 sts=2 sw=2
 autocmd Filetype h setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+autocmd Filetype ts setlocal ts=2 sts=2 sw=2
 
 let NERDTreeIgnore = ['^__pycache__$', '\.pyc$']
 
