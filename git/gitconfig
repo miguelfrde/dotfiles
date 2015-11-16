@@ -2,16 +2,16 @@
     name = Miguel Flores Ruiz de Eguino
     email = miguel.frde@gmail.com
 [core]
-	quotepath = false
+    quotepath = false
     excludesfile = ~/.gitignore
     editor  = vim
-	autocrlf = input
+    autocrlf = input
 [alias]
     ci = commit
     co = checkout
-	g = grep --break --heading --line-number
+    g = grep --break --heading --line-number
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	d = difftool
+    d = difftool
 [web]
     browser = google-chrome
 [color]
@@ -32,20 +32,20 @@
     local = green
     remote = magenta
 [hub]
-	protocol = https
+    protocol = https
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [grep]
-	extendRegexp = true
-	lineNumber = true
+    extendRegexp = true
+    lineNumber = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
 [merge]
-	tool = opendiff
+    tool = opendiff
 [difftool]
-	prompt = false
+    prompt = false
