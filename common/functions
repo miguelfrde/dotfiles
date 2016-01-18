@@ -55,3 +55,15 @@ function clean_docker() {
     docker rm -v $(docker ps -a -q -f status=exited) > /dev/null 2>&1
     docker rmi $(docker images -f "dangling=true" -q)
 }
+
+function change_container_cluster() {
+    gcloud container clusters get-credentials $1
+    kubectl config set-cluster $1
+}
+
+function replace_in_files() {
+    local original=$1
+    local replacement=$2
+    local files=$3
+    grep -lr "$original" $files | xargs sed -i "" "s/$original/$replacement/g"
+}

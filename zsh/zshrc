@@ -36,6 +36,11 @@ source '/Users/miguelfrde/google-cloud-sdk/completion.zsh.inc'
 # Virtualenv wrapper
 source '/usr/local/bin/virtualenvwrapper.sh'
 
+# Option-Arrow to move through words in the CLI
+bindkey -e
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+
 # CTRL Z nice
 fancy-ctrl-z() {
   if [[ $#BUFFER -eq 0 ]]; then
@@ -60,3 +65,6 @@ export NVM_DIR="/Users/miguelfrde/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 source /usr/local/share/zsh/site-functions/_aws
+
+# added by travis gem
+[ -f /Users/miguelfrde/.travis/travis.sh ] && source /Users/miguelfrde/.travis/travis.sh

@@ -4,7 +4,7 @@
 [core]
     quotepath = false
     excludesfile = ~/.gitignore
-    editor  = vim
+    editor = /usr/local/bin/vim
     autocrlf = input
 [alias]
     ci = commit

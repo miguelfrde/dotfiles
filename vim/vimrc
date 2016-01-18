@@ -65,6 +65,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'editorconfig/editorconfig-vim'
 " Typescript
 Plugin 'leafgarland/typescript-vim'
+" Thrift
+Plugin 'solarnz/thrift.vim'
+" Haskell
+Plugin 'vim-scripts/haskell.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -174,6 +178,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype go setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd Filetype erb setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
@@ -187,3 +192,5 @@ autocmd Filetype ts setlocal ts=2 sts=2 sw=2
 let NERDTreeIgnore = ['^__pycache__$', '\.pyc$']
 
 let g:syntastic_python_python_exec = system('which python')
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_post_args="--max-line-length=120"
