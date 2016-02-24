@@ -14,8 +14,6 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-scripts/mru.vim'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
-" Jedi Vim
-Plugin 'davidhalter/jedi-vim'
 " Syntax checking
 Plugin 'scrooloose/syntastic'
 " Toggle comments, etc
@@ -36,7 +34,8 @@ Plugin 'honza/vim-snippets'
 " Flake8
 Plugin 'nvie/vim-flake8'
 " Status bar
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Git diff in the gutter
 Plugin 'airblade/vim-gitgutter'
 " Virtualenv
@@ -56,9 +55,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " CtrlP
 Plugin 'kien/ctrlp.vim'
-" Nice Zen mode for Markdown
-Plugin 'junegunn/goyo.vim'
-Plugin 'amix/vim-zenroom2'
 " Emmet
 Plugin 'mattn/emmet-vim'
 " Vim
@@ -69,6 +65,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'solarnz/thrift.vim'
 " Haskell
 Plugin 'vim-scripts/haskell.vim'
+" Markdown
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 call vundle#end()
 filetype plugin indent on
@@ -194,3 +192,12 @@ let NERDTreeIgnore = ['^__pycache__$', '\.pyc$']
 let g:syntastic_python_python_exec = system('which python')
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_post_args="--max-line-length=120"
+
+" Save our swap and history files to ~/.vimdata, to keep the working dir clean
+set directory=~/.vimdata// " // at the end sets the filename to full path, to ensure uniqueness
+set undodir=~/.vimdata
+set undofile " Save our undo history to a file when writing a file - Saves to undodir
+
+let vim_markdown_preview_toggle=2
+let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<C-m>'
