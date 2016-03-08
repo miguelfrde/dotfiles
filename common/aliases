@@ -20,13 +20,13 @@ alias ll='tree --dirsfirst -ChFupDaLg 1'
 alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 
 # View local IP
-alias localip="ipconfig getifaddr en1"
+alias localip="ipconfig getifaddr en0"
 
 # View size of current directory
 alias d="du -h -d=1"
 
 # Used to connect to Raspberry Pi
-alias rpi='ssh 192.168.2.2 -l pi' 
+alias rpi='ssh 192.168.1.10 -l pi'
 
 # Use hub
 alias git=hub

@@ -66,7 +66,8 @@ Plugin 'solarnz/thrift.vim'
 " Haskell
 Plugin 'vim-scripts/haskell.vim'
 " Markdown
-Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'tpope/vim-markdown'
+Plugin 'suan/vim-instant-markdown'
 
 call vundle#end()
 filetype plugin indent on
@@ -198,6 +199,3 @@ set directory=~/.vimdata// " // at the end sets the filename to full path, to en
 set undodir=~/.vimdata
 set undofile " Save our undo history to a file when writing a file - Saves to undodir
 
-let vim_markdown_preview_toggle=2
-let vim_markdown_preview_github=1
-let vim_markdown_preview_hotkey='<C-m>'

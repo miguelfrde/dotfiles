@@ -52,8 +52,9 @@ function docker-ip() {
 }
 
 function clean_docker() {
-    docker rm -v $(docker ps -a -q -f status=exited) > /dev/null 2>&1
-    docker rmi $(docker images -f "dangling=true" -q)
+    docker stop $(docker ps -q)
+    docker rm $(docker ps -q)
+    docker rmi -f $(docker images -qa)
 }
 
 function change_container_cluster() {
