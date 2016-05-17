@@ -68,3 +68,6 @@ source /usr/local/share/zsh/site-functions/_aws
 
 # added by travis gem
 [ -f /Users/miguelfrde/.travis/travis.sh ] && source /Users/miguelfrde/.travis/travis.sh
+
+# added by fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

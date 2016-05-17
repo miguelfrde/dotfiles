@@ -30,6 +30,9 @@ SETUP_DIR="$(pwd)"
 echo_title "Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 export PATH="/usr/local/bin:$PATH"
+cd packages
+brew install
+cd $SETUP_DIR
 echo_done "Homebrew"
 
 echo_title "Pip stuff"
@@ -62,6 +65,7 @@ sudo bash -c "echo /usr/local/bin/zsh >> /etc/shells"
 sudo bash -c "echo /usr/local/bin/zsh >> /private/etc/shells"
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 git clone https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.256.itermcolors ~/Desktop
+/usr/local/opt/fzf/install
 echo "NOTE: The iTerm theme is in your desktop, load the profile on iTerm to install it..."
 echo_done "Some configurations"
 

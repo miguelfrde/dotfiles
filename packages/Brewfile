@@ -27,6 +27,7 @@ install postgres
 
 # Terminal
 install coreutils
+install fzf
 install gdb
 install tree
 install wget
