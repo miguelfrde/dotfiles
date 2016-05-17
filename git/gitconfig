@@ -10,7 +10,7 @@
     ci = commit
     co = checkout
     g = grep --break --heading --line-number
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    hist = log --oneline --graph
     d = difftool
 [web]
     browser = google-chrome
