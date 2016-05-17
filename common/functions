@@ -1,5 +1,5 @@
 # Update OSX
-function update_osx() { 
+function update_osx() {
     echo "Find Apple software updates"
     sudo softwareupdate -i -a
 }
@@ -41,25 +41,17 @@ function mit_license() {
     local name="Miguel Flores Ruiz de Eguino"
     local url="http://www.miguelfrde.com/"
     local email="miguel.frde@gmail.com"
-    local miturl="http://miguelfrde.mit-license.org"
+    local miturl="https://miguelfrde.mit-license.org"
     local json='{"copyright": "${name}", "url": "${url}", "email": "${email}", "format": "txt" }'
     curl -d ${json} ${miturl} > /dev/null 2>&1
     curl -s ${miturl} > $1
 }
 
-function docker-ip() {
-    docker-machine ip default 2>/dev/null
-}
 
 function clean_docker() {
     docker stop $(docker ps -q)
     docker rm $(docker ps -q)
     docker rmi -f $(docker images -qa)
-}
-
-function change_container_cluster() {
-    gcloud container clusters get-credentials $1
-    kubectl config set-cluster $1
 }
 
 function replace_in_files() {
