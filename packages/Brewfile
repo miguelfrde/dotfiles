@@ -1,23 +1,40 @@
+tap homebrew/binary
+
 update
 upgrade
 
-caskroom/cask
-homebrew/binary
-homebrew/dupes
-
-# Homebrew external commands
-install brew-cask
-
-# Some dependencies
-install ctags-exuberant
-
 # Languages
+install haskell-stack
+install go
 install node
 install python
 install python3
 install ruby
-cask install java
-cask install mactex
+
+# Docker
+install docker
+install docker-machine
+install docker-compose
+
+# Node
+install nvm
+
+# Utilities
+install cmake
+install coreutils
+install ctags
+install fzf
+install gcc
+install gdb
+install grep --with-default-names
+install htop
+install ngrok2
+install thefuck
+install tree
+install unrar
+install watch
+install watchman
+install wget
 
 # Databases
 install mongodb
@@ -25,13 +42,8 @@ install mysql
 install sqlite
 install postgres
 
-# Terminal
-install coreutils
-install fzf
-install gdb
-install tree
-install wget
-install grep --with-default-names
+# Editors
+install vim
 
 # VCS
 install git
@@ -39,24 +51,17 @@ install hub
 
 # Media
 install imagemagick
-install ffmpeg
-
-# Python
-install pypy
 
 # Ruby
 install rbenv
 install ruby-build
 
 # Other
+install android-sdk
 install awscli
-install cmake
-install gist
-install heroku-toolbelt
-install macvim
-install vim
-install webkit2png
-install youtube-dl
+install heroku
+install kubernetes-cli
+install nginx
 
 # Quicklook plugins
 cask install qlcolorcode
@@ -70,16 +75,20 @@ cask install firefox
 cask install google-chrome
 
 # Communication
+cask install limechat
 cask install skype
 cask install slack
 cask install telegram
+cask install whatsapp
 
 # Development
-cask install dockertoolbox
-cask install googleappengine
-cask install mou
+cask install dash
+cask install iterm2-beta
+cask install paw
+cask install postico
 cask install sequel-pro
-cask install sublime-text3
+cask install trailer
+cask install virtualbox
 
 # Entertainment
 cask install spotify
@@ -89,18 +98,12 @@ cask install gimp
 cask install vlc
 
 # Torrents
-cask install utorrent
 
 # Utilities
-cask install adobe-reader
 cask install alfred
-cask install appcleaner
 cask install caffeine
 cask install dash
-cask install dropl
-cask install droplr
 cask install dropbox
-cask install google-hangouts
-cask install iterm2
+cask install transmission
 
 cleanup
