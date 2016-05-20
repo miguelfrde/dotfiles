@@ -31,34 +31,31 @@ echo_title "Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 export PATH="/usr/local/bin:$PATH"
 cd packages
-brew install
+brew tap 'Homebrew/bundle'
+brew bundle
+brew cleanup
 cd $SETUP_DIR
 echo_done "Homebrew"
 
-echo_title "Pip stuff"
-sudo pip install -r packages/Pipfile
-echo_done "Pip stuff"
+echo_title "Pip packages"
+pip install -r packages/Pipfile
+echo_done "Pip packages"
 
-echo_title "Ruby"
-brew install rbenv ruby-build
-rbenv install 2.2.2
-rbenv global 2.2.2
-echo_done "Ruby"
-
-echo_title "Update Ruby Gem and installed gems"
+echo_title "Ruby stuff"
+rbenv install 2.3.1
+rbenv global 2.3.1
 gem update --system
 gem update
-
-echo_title "Gem stuff"
 cd packages
 gem install bundler
 bundle install
 cd $SETUP_DIR
-echo_done "Gem stuff"
+echo_done "Ruby"
 
-echo_title "Node packages"
+echo_title "Node stuff"
+nvm install stable
 source packages/Npmfile
-echo_done "Node packages"
+echo_done "Node stuff"
 
 echo_title "Some configurations"
 sudo bash -c "echo /usr/local/bin/zsh >> /etc/shells"

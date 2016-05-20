@@ -1,109 +1,102 @@
-tap homebrew/binary
+cask_args appdir: '/Applications'
 
-update
-upgrade
+tap 'homebrew/binary'
 
 # Languages
-install haskell-stack
-install go
-install node
-install python
-install python3
-install ruby
-
-# Docker
-install docker
-install docker-machine
-install docker-compose
+brew 'haskell-stack'
+brew 'go'
+brew 'python'
+brew 'python3'
 
 # Node
-install nvm
-
-# Utilities
-install cmake
-install coreutils
-install ctags
-install fzf
-install gcc
-install gdb
-install grep --with-default-names
-install htop
-install ngrok2
-install thefuck
-install tree
-install unrar
-install watch
-install watchman
-install wget
-
-# Databases
-install mongodb
-install mysql
-install sqlite
-install postgres
-
-# Editors
-install vim
-
-# VCS
-install git
-install hub
-
-# Media
-install imagemagick
+brew 'nvm'
 
 # Ruby
-install rbenv
-install ruby-build
+brew 'rbenv'
+brew 'ruby'-build
 
-# Other
-install android-sdk
-install awscli
-install heroku
-install kubernetes-cli
-install nginx
-
-# Quicklook plugins
-cask install qlcolorcode
-cask install qlmarkdown
-cask install qlstephen
-cask install quicklook-json
-cask install quicklook-csv
-
-# Browsers
-cask install firefox
-cask install google-chrome
-
-# Communication
-cask install limechat
-cask install skype
-cask install slack
-cask install telegram
-cask install whatsapp
-
-# Development
-cask install dash
-cask install iterm2-beta
-cask install paw
-cask install postico
-cask install sequel-pro
-cask install trailer
-cask install virtualbox
-
-# Entertainment
-cask install spotify
-
-# Image and video
-cask install gimp
-cask install vlc
-
-# Torrents
+# Docker
+brew 'docker'
+brew 'docker'-machine
+brew 'docker'-compose
 
 # Utilities
-cask install alfred
-cask install caffeine
-cask install dash
-cask install dropbox
-cask install transmission
+brew 'cmake'
+brew 'coreutils'
+brew 'ctags'
+brew 'fzf'
+brew 'gcc', args: ['without-multilib']
+brew 'gdb'
+brew 'grep', args: ['with-default-names']
+brew 'htop'
+brew 'ngrok2'
+brew 'thefuck'
+brew 'tree'
+brew 'unrar'
+brew 'watch'
+brew 'watchman'
+brew 'wget'
 
-cleanup
+# Databases
+brew 'mongodb'
+brew 'mysql'
+brew 'sqlite'
+brew 'postgres'
+
+# Editors
+brew 'vim'
+
+# VCS
+brew 'git'
+brew 'hub'
+
+# Media
+brew 'imagemagick'
+
+# Other
+brew 'android'-sdk
+brew 'awscli'
+brew 'heroku'
+brew 'kubernetes'-cli
+brew 'nginx'
+
+# Quicklook plugins
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'qlstephen'
+cask 'quicklook'-json
+cask 'quicklook'-csv
+
+# Browsers
+cask 'firefox'
+cask 'google'-chrome
+
+# Communication
+cask 'limechat'
+cask 'skype'
+cask 'slack'
+cask 'telegram'
+cask 'whatsapp'
+
+# Development
+cask 'dash'
+cask 'iterm2'-beta
+cask 'paw'
+cask 'postico'
+cask 'sequel'-pro
+cask 'trailer'
+cask 'virtualbox'
+
+# Entertainment
+cask 'spotify'
+
+# Image and video
+cask 'gimp'
+cask 'vlc'
+
+# Utilities
+cask 'alfred'
+cask 'caffeine'
+cask 'dash'
+cask 'dropbox'
+cask 'transmission'
