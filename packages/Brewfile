@@ -12,13 +12,13 @@ brew 'python3'
 brew 'nvm'
 
 # Ruby
+brew 'ruby-build'
 brew 'rbenv'
-brew 'ruby'-build
 
 # Docker
 brew 'docker'
-brew 'docker'-machine
-brew 'docker'-compose
+brew 'docker-machine'
+brew 'docker-compose'
 
 # Utilities
 brew 'cmake'
@@ -54,22 +54,22 @@ brew 'hub'
 brew 'imagemagick'
 
 # Other
-brew 'android'-sdk
+brew 'android-sdk'
 brew 'awscli'
 brew 'heroku'
-brew 'kubernetes'-cli
+brew 'kubernetes-cli'
 brew 'nginx'
 
 # Quicklook plugins
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlstephen'
-cask 'quicklook'-json
-cask 'quicklook'-csv
+cask 'quicklook-json'
+cask 'quicklook-csv'
 
 # Browsers
 cask 'firefox'
-cask 'google'-chrome
+cask 'google-chrome'
 
 # Communication
 cask 'limechat'
@@ -80,10 +80,10 @@ cask 'whatsapp'
 
 # Development
 cask 'dash'
-cask 'iterm2'-beta
+cask 'iterm2-beta'
 cask 'paw'
 cask 'postico'
-cask 'sequel'-pro
+cask 'sequel-pro'
 cask 'trailer'
 cask 'virtualbox'
 
