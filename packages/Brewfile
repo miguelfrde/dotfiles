@@ -31,6 +31,7 @@ brew 'grep', args: ['with-default-names']
 brew 'htop'
 brew 'ngrok2'
 brew 'thefuck'
+brew 'tmux'
 brew 'tree'
 brew 'unrar'
 brew 'watch'
