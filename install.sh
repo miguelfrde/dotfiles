@@ -1,26 +1,26 @@
 #!/bin/bash
 
 function echo_title() {
-    echo "\n===== Install $1 ====="
+  echo "\n===== Install $1 ====="
 }
 
 function echo_done() {
-    echo "$1 installed!"
+  echo "$1 installed!"
 }
 
 function link_dotfiles() {
-    local dir=$1
-    for file in $(ls $dir); do
-        ln -sf `pwd`/$dir/$file ~/.$file
-    done
+  local dir=$1
+  for file in $(ls $dir); do
+    ln -sf `pwd`/$dir/$file ~/.$file
+  done
 }
 
 r="$(pkgutil --pkg-info=com.apple.pkg.CLTools_Executables 2>/dev/null | grep -v version)"
 
 if [ "$r" == '' ]; then
-    echo "Xcode Coommand Line Tools needed. Installing now"
-    xcode-select --install
-    exit 1
+  echo "Xcode Coommand Line Tools needed. Installing now"
+  xcode-select --install
+  exit 1
 fi
 
 clear
