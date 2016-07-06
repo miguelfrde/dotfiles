@@ -75,7 +75,7 @@ source vim/vim-setup.sh
 echo_done "Vim stuff"
 
 echo_title "dotfiles"
-link_dotfiles "common"
+link_dotfiles "dotfiles"
 link_dotfiles "git"
 echo_done "dotfiles"
 
