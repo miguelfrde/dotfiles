@@ -10,7 +10,7 @@ Included
 
 - osx.sh: run it to update preferences of the following apps: Finder, Dock, Safari, Mail, Activity Monitor, Transmission and other OSX settings. OUTDATED.
 
-- common/*: contains exports, useful functions, aliases, my sqliterc and the file .hushlogin.
+- common/*: contains exports, useful functions, aliases, my sqliterc, my tmux configuration and the file .hushlogin.
 
 - vim/*: includes my vimrc and a script to setup my vim: vundle, plugins and .vimrc.
 
