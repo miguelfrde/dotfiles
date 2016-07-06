@@ -69,6 +69,8 @@ Plugin 'vim-scripts/haskell.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
 
+Plugin 'wikitopian/hardmode'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -159,9 +161,6 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
 
-" Mouse
-set mouse=a
-
 " ctags
 set tags=$HOME/.tags
 
@@ -175,6 +174,8 @@ set cursorline cursorcolumn
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
+let g:HardMode_level = 'wannabe'
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype go setlocal ts=4 sts=4 sw=4 noexpandtab
@@ -198,4 +199,3 @@ let g:syntastic_python_flake8_post_args="--max-line-length=120"
 set directory=~/.vimdata// " // at the end sets the filename to full path, to ensure uniqueness
 set undodir=~/.vimdata
 set undofile " Save our undo history to a file when writing a file - Saves to undodir
-
