@@ -59,6 +59,7 @@ brew 'awscli'
 brew 'heroku'
 brew 'kubernetes-cli'
 brew 'nginx'
+brew 'reattach-to-user-namespace'
 
 # Quicklook plugins
 cask 'qlcolorcode'

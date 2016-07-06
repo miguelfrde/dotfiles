@@ -41,9 +41,6 @@ alias cdf='open .'
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 
-# Start vim with NERDTree always
-alias vim='vim +NERDTree'
-
 # dropbox
 alias dbox='cd ~/Dropbox'
 
@@ -51,3 +48,5 @@ alias dbox='cd ~/Dropbox'
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 
 alias weather="curl http://wttr.in"
+
+alias tmux="TERM=xterm-256color tmux"

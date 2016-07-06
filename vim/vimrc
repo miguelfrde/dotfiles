@@ -70,6 +70,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
 
 Plugin 'wikitopian/hardmode'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on

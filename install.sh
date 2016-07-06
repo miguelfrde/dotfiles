@@ -79,6 +79,10 @@ link_dotfiles "common"
 link_dotfiles "git"
 echo_done "dotfiles"
 
+echo_title "tmux stuff"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo_done "tmux stuff"
+
 echo_title "OSX configurations"
 source osx.sh
 echo_done "OSX configurations"
