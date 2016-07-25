@@ -1,6 +1,7 @@
 [user]
     name = Miguel Flores Ruiz de Eguino
     email = miguel.frde@gmail.com
+    signingkey = 897732AF
 [core]
     quotepath = false
     excludesfile = ~/.gitignore
@@ -49,3 +50,5 @@
     tool = opendiff
 [difftool]
     prompt = false
+[commit]
+    gpgsign = true
