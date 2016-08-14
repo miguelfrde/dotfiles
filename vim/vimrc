@@ -168,10 +168,8 @@ set tags=$HOME/.tags
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
 
-" Highlight current line and column
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+" Highlight current line
+set cursorline
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
