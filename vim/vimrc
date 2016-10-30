@@ -72,6 +72,9 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'wikitopian/hardmode'
 Plugin 'christoomey/vim-tmux-navigator'
 
+" CSS colors
+Plugin 'gorodinskiy/vim-coloresque'
+
 call vundle#end()
 filetype plugin indent on
 
