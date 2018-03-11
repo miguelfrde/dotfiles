@@ -10,7 +10,7 @@ mkdir -p ~/.oh-my-zsh/custom/themes
 cp miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes
 
 echo "Installing hub completion.."
-mkdir -p .zsh
+mkdir -p ~/.zsh
 curl https://github.com/github/hub/blob/master/etc/hub.zsh_completion >  ~/.zsh/_hub
 
 echo "Linking .zshrc..."

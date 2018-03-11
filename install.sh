@@ -38,12 +38,12 @@ cd $SETUP_DIR
 echo_done "Homebrew"
 
 echo_title "Pip packages"
-pip install -r packages/Pipfile
+pip3 install -r packages/Pipfile
 echo_done "Pip packages"
 
 echo_title "Ruby stuff"
-rbenv install 2.3.1
-rbenv global 2.3.1
+rbenv install 2.5.0
+rbenv global 2.5.0
 gem update --system
 gem update
 cd packages
@@ -53,15 +53,17 @@ cd $SETUP_DIR
 echo_done "Ruby"
 
 echo_title "Node stuff"
+export NVM_DIR="$HOME/.nvm"
+source "/usr/local/opt/nvm/nvm.sh"
 nvm install stable
-source packages/Npmfile
+#source packages/Npmfile
 echo_done "Node stuff"
 
 echo_title "Some configurations"
 sudo bash -c "echo /usr/local/bin/zsh >> /etc/shells"
 sudo bash -c "echo /usr/local/bin/zsh >> /private/etc/shells"
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-git clone https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.256.itermcolors ~/Desktop
+curl https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.256.itermcolors > ~/Desktop/base16-ocean.dark.256.itermcolors
 /usr/local/opt/fzf/install
 echo "NOTE: The iTerm theme is in your desktop, load the profile on iTerm to install it..."
 echo_done "Some configurations"

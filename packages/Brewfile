@@ -1,6 +1,6 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/binary'
+tap 'caskroom/versions'
 
 # Languages
 brew 'haskell-stack'
@@ -12,24 +12,24 @@ brew 'python3'
 brew 'nvm'
 
 # Ruby
-brew 'ruby-build'
-brew 'rbenv'
+#brew 'ruby-build'
+#brew 'rbenv'
 
 # Docker
 brew 'docker'
 brew 'docker-machine'
-brew 'docker-compose'
+#brew 'docker-compose'
 
 # Utilities
 brew 'cmake'
 brew 'coreutils'
 brew 'ctags'
-brew 'fzf'
+#brew 'fzf'
 brew 'gcc', args: ['without-multilib']
 brew 'gdb'
 brew 'grep', args: ['with-default-names']
 brew 'htop'
-brew 'ngrok2'
+brew 'llvm', args: ['with-toolchain']
 brew 'thefuck'
 brew 'tmux'
 brew 'tree'
@@ -39,10 +39,10 @@ brew 'watchman'
 brew 'wget'
 
 # Databases
-brew 'mongodb'
-brew 'mysql'
-brew 'sqlite'
-brew 'postgres'
+#brew 'mongodb'
+#brew 'mysql'
+#brew 'sqlite'
+#brew 'postgres'
 
 # Editors
 brew 'vim'
@@ -52,14 +52,14 @@ brew 'git'
 brew 'hub'
 
 # Media
-brew 'imagemagick'
+#brew 'imagemagick'
 
 # Other
-brew 'android-sdk'
-brew 'awscli'
-brew 'heroku'
-brew 'kubernetes-cli'
-brew 'nginx'
+#brew 'android-sdk'
+#brew 'awscli'
+#brew 'heroku'
+#brew 'kubernetes-cli'
+#brew 'nginx'
 
 # Quicklook plugins
 cask 'qlcolorcode'
@@ -69,35 +69,33 @@ cask 'quicklook-json'
 cask 'quicklook-csv'
 
 # Browsers
-cask 'firefox'
+#cask 'firefox'
 cask 'google-chrome'
 
 # Communication
-cask 'limechat'
-cask 'skype'
-cask 'slack'
+#cask 'limechat'
+#cask 'skype'
+#cask 'slack'
 cask 'telegram'
-cask 'whatsapp'
+#cask 'whatsapp'
 
 # Development
-cask 'dash'
 cask 'iterm2-beta'
-cask 'paw'
-cask 'postico'
-cask 'sequel-pro'
-cask 'trailer'
-cask 'virtualbox'
+cask 'ngrok'
+#cask 'paw'
+#cask 'postico'
+#cask 'sequel-pro'
+#cask 'virtualbox'
 
 # Entertainment
 cask 'spotify'
 
 # Image and video
 cask 'gimp'
-cask 'vlc'
+#cask 'vlc'
 
 # Utilities
-cask 'alfred'
-cask 'caffeine'
-cask 'dash'
-cask 'dropbox'
-cask 'transmission'
+#cask 'alfred'
+#cask 'caffeine'
+#cask 'dropbox'
+#cask 'transmission'

@@ -71,3 +71,6 @@ source '/Users/miguelfrde/Downloads/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/miguelfrde/Downloads/google-cloud-sdk/completion.zsh.inc'
+
+# Zsh syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
