@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
 
 # For virtualenvwrapper to work properly
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_PYTHON="$(which python3)"
 export WORKON_HOME=~/.virtualenvs
 
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
@@ -19,7 +19,7 @@ export CLICOLOR=1
 #   - Socket -> bold green
 #   - Pipe -> yellow
 #   - Executable -> bold red
-#   - Block device, character device, 
+#   - Block device, character device,
 #     executable with setuid set, executable with setguid set,
 #     directory writable by others, with/without sticky bit
 #     -> default colors

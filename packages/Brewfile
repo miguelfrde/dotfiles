@@ -27,6 +27,7 @@ brew 'ctags'
 #brew 'fzf'
 brew 'gcc', args: ['without-multilib']
 brew 'gdb'
+brew 'gpg'
 brew 'grep', args: ['with-default-names']
 brew 'htop'
 brew 'llvm', args: ['with-toolchain']
@@ -74,6 +75,7 @@ cask 'google-chrome'
 
 # Communication
 #cask 'limechat'
+cask 'signal'
 #cask 'skype'
 #cask 'slack'
 cask 'telegram'
