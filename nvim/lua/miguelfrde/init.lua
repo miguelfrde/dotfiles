@@ -2,7 +2,7 @@ require("miguelfrde.packer")
 require("miguelfrde.vimrc")
 require("miguelfrde.plugins")
 
--- LSP Diagnostics Options Setup 
+-- LSP Diagnostics Options Setup
 local sign = function(opts)
   vim.fn.sign_define(opts.name, {
     texthl = opts.name,
@@ -30,7 +30,8 @@ vim.diagnostic.config({
     },
 })
 
+-- Diagnostics in sign column
 vim.cmd([[
-set signcolumn=yes
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+  set signcolumn=yes
+  autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
