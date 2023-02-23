@@ -1,66 +1,29 @@
-cask_args appdir: '/Applications'
+tap 'homebrew/cask-fonts'
 
-tap 'caskroom/versions'
-
-# Languages
-brew 'haskell-stack'
-brew 'go'
-brew 'python'
-brew 'python3'
-
-# Node
-brew 'nvm'
-
-# Ruby
-#brew 'ruby-build'
-#brew 'rbenv'
-
-# Docker
-brew 'docker'
-brew 'docker-machine'
-#brew 'docker-compose'
-
-# Utilities
-brew 'cmake'
-brew 'coreutils'
-brew 'ctags'
-#brew 'fzf'
-brew 'gcc', args: ['without-multilib']
-brew 'gdb'
+# Tool
 brew 'gpg'
-brew 'grep', args: ['with-default-names']
-brew 'htop'
-brew 'llvm', args: ['with-toolchain']
-brew 'thefuck'
+brew 'fzf'
+brew 'hub'
+brew 'neovim'
+brew 'ripgrep'
 brew 'tmux'
 brew 'tree'
-brew 'unrar'
-brew 'watch'
-brew 'watchman'
-brew 'wget'
+brew 'zsh-syntax-highlighting'
 
-# Databases
-#brew 'mongodb'
-#brew 'mysql'
-#brew 'sqlite'
-#brew 'postgres'
+# Needed for pyenv install
+brew 'pyenv'
+brew 'xz'
 
-# Editors
-brew 'vim'
+# Some apps
+cask 'caffeine'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'spotify'
 
-# VCS
-brew 'git'
-brew 'hub'
-
-# Media
-#brew 'imagemagick'
-
-# Other
-#brew 'android-sdk'
-#brew 'awscli'
-#brew 'heroku'
-#brew 'kubernetes-cli'
-#brew 'nginx'
+# Communication
+cask 'signal'
+cask 'telegram'
+cask 'whatsapp'
 
 # Quicklook plugins
 cask 'qlcolorcode'
@@ -69,35 +32,5 @@ cask 'qlstephen'
 cask 'quicklook-json'
 cask 'quicklook-csv'
 
-# Browsers
-#cask 'firefox'
-cask 'google-chrome'
-
-# Communication
-#cask 'limechat'
-cask 'signal'
-#cask 'skype'
-#cask 'slack'
-cask 'telegram'
-#cask 'whatsapp'
-
-# Development
-cask 'iterm2-beta'
-cask 'ngrok'
-#cask 'paw'
-#cask 'postico'
-#cask 'sequel-pro'
-#cask 'virtualbox'
-
-# Entertainment
-cask 'spotify'
-
-# Image and video
-cask 'gimp'
-#cask 'vlc'
-
-# Utilities
-#cask 'alfred'
-#cask 'caffeine'
-#cask 'dropbox'
-#cask 'transmission'
+# Fonts
+cask 'font-hack-nerd-font'

@@ -4,54 +4,9 @@ function update_osx() {
     sudo softwareupdate -i -a
 }
 
-# Update brew
-function update_brew() {
-    echo "Update brew and its packages"
-    brew update
-    brew upgrade
-    brew cleanup
-}
-
-# Update gems
-function update_gems() {
-    echo "Update gems"
-    sudo gem update --system
-    sudo gem update
-}
-
-# Update OSX and brew
-function update() {
-    update_osx
-    update_pip
-    update_gems
-}
-
 # Create a new directory and cd into it
 function mkd() {
     mkdir -p "$1" && cd "$1"
-}
-
-# Update all pip packages
-function update_pip() {
-    pip freeze | cut -d = -f 1 | xargs pip install -U
-}
-
-# Get personal MIT license
-function mit_license() {
-    local name="Miguel Flores Ruiz de Eguino"
-    local url="http://www.miguelfrde.com/"
-    local email="miguel.frde@gmail.com"
-    local miturl="https://miguelfrde.mit-license.org"
-    local json='{"copyright": "${name}", "url": "${url}", "email": "${email}", "format": "txt" }'
-    curl -d ${json} ${miturl} > /dev/null 2>&1
-    curl -s ${miturl} > $1
-}
-
-
-function clean_docker() {
-    docker stop $(docker ps -q)
-    docker rm $(docker ps -q)
-    docker rmi -f $(docker images -qa)
 }
 
 function replace_in_files() {

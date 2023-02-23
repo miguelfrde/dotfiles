@@ -1,30 +1,5 @@
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:$PATH"
-
-# For virtualenvwrapper to work properly
-export VIRTUALENVWRAPPER_PYTHON="$(which python3)"
-export WORKON_HOME=~/.virtualenvs
-
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-  export TERM='xterm-256color'
-else
-  export TERM='xterm-color'
-fi
-
 # Always show colors
 export CLICOLOR=1
-
-# Colors for ls
-#   - Directory -> cyan
-#   - Symlink -> magenta
-#   - Socket -> bold green
-#   - Pipe -> yellow
-#   - Executable -> bold red
-#   - Block device, character device,
-#     executable with setuid set, executable with setguid set,
-#     directory writable by others, with/without sticky bit
-#     -> default colors
-# default: exfxcxdxbxegedabagacad
-export LSCOLORS=gxFxCxDxBxegedabagacad
 
 # Default editor -> Vim
 export EDITOR='vim'
@@ -41,22 +16,6 @@ export GREP_COLOR='1;32'
 export ZSH_THEME_TERM_TAB_TITLE_IDLE="%c"
 export ZSH_THEME_TERM_TITLE_IDLE="%n@%m %5c"
 
-# App Engine stuff
-export GAE="/usr/local/google_appengine"
-export PYTHONPATH="$PYTHONPATH:$GAE:$GAE/lib/django-1.5"
-export PATH="$PATH:$GAE/lib/django-1.5/django/bin"
-
-# Rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-
-# Andorid
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
-# Golang
-export GOPATH=$HOME/Development/gocode
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-
-# Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
-export PATH=$PATH:$JAVA_HOME/bin
+# Pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH="$PYENV_ROOT/bin:$PATH"

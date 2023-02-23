@@ -1,11 +1,10 @@
 [user]
     name = Miguel Flores Ruiz de Eguino
-    email = miguel.frde@gmail.com
-    signingkey = ACC808D05F06C556
+    email = 1889916+miguelfrde@users.noreply.github.com
 [core]
     quotepath = false
     excludesfile = ~/.gitignore
-    editor = /usr/local/bin/vim
+    editor = /opt/homebrew/bin/nvim
     autocrlf = input
 [alias]
     ci = commit

@@ -1,38 +1,44 @@
-dotfiles
-========
+# dotfiles
 
-My OSX dotfiles configuration.
+My dotfiles configuration.
 
-Included
---------
+## Included
 
-- install.sh: this is the main script, run it to install: Xcode Command Line Tools, Homebrew and its packages, pip and its packages, update Gem and installs some gems, my Sublime Text configuration, oh-my-zsh and setup the shell environment.
-
-- osx.sh: run it to update preferences of the following apps: Finder, Dock, Safari, Mail, Activity Monitor, Transmission and other OSX settings. OUTDATED.
-
-- common/*: contains exports, useful functions, aliases, my sqliterc, my tmux configuration and the file .hushlogin.
-
-- vim/*: includes my vimrc and a script to setup my vim: vundle, plugins and .vimrc.
-
-- zsh/*: includes my ~/.zshrc and my custom zsh prompt theme.
-
-- git/*: includes my ~/.gitconfig and my ~/.gitignore
-
-- packages/*: install.sh uses the files contained in here to install all gems and pip, npm & brew packages.
+- `dotfiles/*`: contains useful shell stuff such as aliases, exports, functions and my tmux.conf.
+- `git/*`: contains my git config.
+- `nvim/*`: contains my NeoVim configuration.
+- `packages/*`: contains software I like to install.
+- `zsh/*`: contains my ZSH configuration including my oh-my-zsh theme.
 
 
-Prompt
-------
+## Install
 
-Shows the current branch on the current directory if the directory belongs to a git repository. If the branch is dirty, then it's name will appear yellow, otherwise it will appear green. It also shows the active Python virtual environment if there's one.
-
-Install
--------
-
-The dotfiles will be linked, so they will be edited from the place where you clone the repo. Therefore, cd to your personal development/github directory before running the `install.sh` script.
+The dotfiles will be linked, so they will be edited from the place where you clone the repo. Therefore, cd to
+your personal development/github directory before running the `install.sh` script.
 
 ```
-$ git clone https://github.com/miguelfrde/dotfiles && cd dotfiles && source install.sh
+$ mkdir -p ~/development
+$ cd ~/development
+$ git clone https://github.com/miguelfrde/dotfiles && cd dotfiles
+$ ./install.sh
 ```
 
-This repo was inspired in part by Mathias Bynens' great [dotfiles](https://github.com/mathiasbynens/dotfiles).
+### Neovim
+
+It should bootstrap packer automatically the first time it's opened.
+Mason is also configured to ensure LSPs are installed.
+
+### iTerm2
+
+Configure to use the catppuccin frappe theme in `.config/catppuccin-iterm//colors/catppuccin-frappe.itermcolors`
+(Settings > Profiles > Colors, then load the color from the path above).
+
+Also configure to use the Hack Nerd Font (Settings > Profiles > Text > Hack Nerd Font).
+
+### Tmux
+
+Run Prefix + `I` the first time it's opened to install plugins.
+
+### OS X
+
+My `osx.sh` is entirely out of date, I should update it.

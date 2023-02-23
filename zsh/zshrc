@@ -6,10 +6,11 @@ fpath=(~/.zsh $fpath)
 
 source ~/.exports
 
+# zsh syntax highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # oh-my-zsh plugins
-plugins=(brew bundler django gem git heroku pip
-         python rake ruby scala sbt virtualenv virtualenvwrapper
-         brew-cask github docker zsh-syntax-highlighting)
+plugins=(brew git pip python github docker)
 
 # Theme to load
 ZSH_THEME="miguelfrde"
@@ -21,14 +22,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 source ~/.functions
-
-# Virtualenv wrapper
-source '/usr/local/bin/virtualenvwrapper.sh'
 
 # Option-Arrow to move through words in the CLI
 bindkey -e
@@ -49,28 +45,8 @@ fancy-ctrl-z() {
 zle -N fancy-ctrl-z
 bindkey '' fancy-ctrl-z
 
-eval "$(thefuck --alias)"
-
-# Base16 Shell
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-export NVM_DIR="/Users/miguelfrde/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-source /usr/local/share/zsh/site-functions/_aws
-
-# added by travis gem
-[ -f /Users/miguelfrde/.travis/travis.sh ] && source /Users/miguelfrde/.travis/travis.sh
-
 # added by fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/miguelfrde/Downloads/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/miguelfrde/Downloads/google-cloud-sdk/completion.zsh.inc'
-
-# Zsh syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Cargo
+source "$HOME/.cargo/env"

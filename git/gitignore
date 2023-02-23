@@ -8,35 +8,8 @@
 .py[cod]
 *.egg
 
-# Java
-*.class
-*.jar
-
 # C
 *.out
 *.o
 *.a
 *.so
-
-# Ruby
-*.rbc
-*.gem
-
-# Misc
-*.test
-*.tmp
-*.temp
-*.log
-*.swp
-tags
-
-# Compressed files
-*.zip
-*.rar
-*.tar
-*.7z
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
