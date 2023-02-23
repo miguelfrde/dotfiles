@@ -54,6 +54,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 link_files 'dotfiles'
 link_files 'git'
 
+# Authorize github
+gh auth login
+
 # We'll now generate a GPG Key for signing git commits
 if [ GENERATE_GPG ]
 then
