@@ -15,6 +15,9 @@ brew 'zsh-syntax-highlighting'
 brew 'pyenv'
 brew 'xz'
 
+# Needed for saving gpg passphrase to osx keychain
+brew 'pinentry-mac'
+
 # Some apps
 cask 'caffeine'
 cask 'google-chrome'

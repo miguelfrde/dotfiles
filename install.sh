@@ -57,6 +57,11 @@ link_files 'git'
 # Authorize github
 gh auth login
 
+# Link GPG files
+link_file `pwd`/gpg/gpg.conf ~/.gnupg/gpg.conf
+link_file `pwd`/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent
+
 # We'll now generate a GPG Key for signing git commits
 if [ GENERATE_GPG ]
 then
