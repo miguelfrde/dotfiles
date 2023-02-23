@@ -18,7 +18,6 @@ require("mason-lspconfig").setup({
   ensure_installed = lsps
 })
 
---require("lspconfig").pyright.setup({})
 require("rust-tools").setup()
 require("rust-tools").setup({
   server = {

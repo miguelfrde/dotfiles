@@ -58,7 +58,6 @@ link_files 'git'
 gh auth login
 
 # Link GPG files
-link_file `pwd`/gpg/gpg.conf ~/.gnupg/gpg.conf
 link_file `pwd`/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
 
