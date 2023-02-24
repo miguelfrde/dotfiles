@@ -19,6 +19,9 @@ function link_files() {
 # Install Homebrew
 /bin/bash -c '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'
 
+# Install rosetta
+sudo softwareupdate --install-rosetta
+
 # Install brew packages
 brew bundle install --file packages/Brewfile
 

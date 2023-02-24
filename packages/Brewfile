@@ -3,6 +3,7 @@ tap 'homebrew/cask-fonts'
 # Tool
 brew 'gpg'
 brew 'fzf'
+brew 'htop'
 brew 'hub'
 brew 'gh'
 brew 'neovim'
@@ -38,3 +39,7 @@ cask 'quicklook-csv'
 
 # Fonts
 cask 'font-hack-nerd-font'
+
+# Audio
+cask 'blackhole-16ch'
+cask 'vcv-rack'  # Needs rosetta
