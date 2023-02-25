@@ -1,9 +1,9 @@
 -- Automatically bootstrap packer on a new machine.
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -38,26 +38,26 @@ return require("packer").startup(function(use)
     branch = "v1.x",
     requires = {
       -- LSP Support
-      { "neovim/nvim-lspconfig"},
+      { "neovim/nvim-lspconfig" },
       -- Install and manage LSP servers, debuggers, linters
-      { "williamboman/mason.nvim"},
-      { "williamboman/mason-lspconfig.nvim"},
+      { "williamboman/mason.nvim" },
+      { "williamboman/mason-lspconfig.nvim" },
 
       -- Automatically setup LSP config for rust-analyzer
       { "simrat39/rust-tools.nvim" },
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp"},
-      { "hrsh7th/cmp-nvim-lsp"},
-      { "hrsh7th/cmp-buffer"},
-      { "hrsh7th/cmp-path"},
-      { "saadparwaiz1/cmp_luasnip"},
-      { "hrsh7th/cmp-nvim-lua"},
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "saadparwaiz1/cmp_luasnip" },
+      { "hrsh7th/cmp-nvim-lua" },
       { "hrsh7th/cmp-nvim-lsp-signature-help" },
 
       -- Snippets
-      { "L3MON4D3/LuaSnip"},
-      { "rafamadriz/friendly-snippets"},
+      { "L3MON4D3/LuaSnip" },
+      { "rafamadriz/friendly-snippets" },
     }
   }
 
@@ -73,7 +73,7 @@ return require("packer").startup(function(use)
   -- Fuzzy finder over lists
   use {
     "nvim-telescope/telescope.nvim", tag = "0.1.1",
-    requires = { {"nvim-lua/plenary.nvim"} }
+    requires = { { "nvim-lua/plenary.nvim" } }
   }
 
   -- File tree explorer
@@ -100,6 +100,9 @@ return require("packer").startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   -- Git utils
   use 'tpope/vim-fugitive'
+
+  -- Fidget: to see rust-analyzer progress.
+  use 'j-hui/fidget.nvim'
 
   -- Leave these after all plugins.
   if packer_bootstrap then

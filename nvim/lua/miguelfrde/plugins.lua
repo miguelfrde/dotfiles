@@ -37,8 +37,8 @@ cmp.setup({
     { name = "buffer" },
     { name = "calc" },
     { name = "luasnip" },
-    { name = "nvim_lua", keyword_length = 2 },
-    { name = "nvim_lsp", keyword_length = 3 },
+    { name = "nvim_lua",               keyword_length = 2 },
+    { name = "nvim_lsp",               keyword_length = 3 },
     { name = "nvim_lsp_signature_help" },
     { name = "path" },
   },
@@ -53,7 +53,7 @@ cmp.setup({
     -- Add tab support
     ["<S-Tab>"] = cmp.mapping.select_prev_item(),
     ["<Tab>"] = cmp.mapping.select_next_item(),
-    ["<C-S-f>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-S-f>"] = cmp.mapping.scroll_docs( -4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.close(),
@@ -175,13 +175,14 @@ require("nvim-treesitter.configs").setup({
 require('gitsigns').setup({
   on_attach = function(bufnr)
     local function map(mode, lhs, rhs, opts)
-      opts = vim.tbl_extend('force', {noremap = true, silent = true}, opts or {})
+      opts = vim.tbl_extend('force', { noremap = true, silent = true }, opts or {})
       vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts)
     end
 
     -- Navigation
-    map('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", { expr=true })
-    map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", { expr=true })
+    map('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })
+    map('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
   end
 })
 
+require("fidget").setup()

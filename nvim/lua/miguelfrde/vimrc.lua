@@ -20,7 +20,7 @@ vim.opt.magic = true -- for better regexes
 -- Text, editing
 vim.opt.backspace = [[indent,eol,start]]
 vim.opt.wrap = true
-vim.opt.scrolloff = 999  -- cursor in the middle of the screen
+vim.opt.scrolloff = 999 -- cursor in the middle of the screen
 
 -- Indentation
 vim.opt.expandtab = true
