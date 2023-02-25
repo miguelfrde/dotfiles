@@ -18,18 +18,6 @@ require("mason-lspconfig").setup({
   ensure_installed = lsps
 })
 
-require("rust-tools").setup()
-require("rust-tools").setup({
-  server = {
-    on_attach = function(_, bufnr)
-      -- Hover actions
-      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-      -- Code action groups
-      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-    end,
-  },
-})
-
 require("nvim-tree").setup()
 require("lualine").setup()
 require("nvim-tmux-navigation").setup({
@@ -80,10 +68,12 @@ cmp.setup({
   }
 })
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require("cmp_nvim_lsp").default_capabilities();
+local lspconfig = require("lspconfig");
+
 for _, lsp in pairs(lsps) do
   if lsp == "lua_ls" then
-    require("lspconfig").lua_ls.setup({
+    lspconfig.lua_ls.setup({
       capabilities = capabilities,
       settings = {
         Lua = {
@@ -93,15 +83,50 @@ for _, lsp in pairs(lsps) do
         }
       }
     })
+  elseif lsp == "rust_analyzer" then
+    -- SKIP. rust-tools configures it for us.
   else
-    require("lspconfig")[lsp].setup({
+    lspconfig[lsp].setup({
       capabilities = capabilities,
     })
   end
 end
 
+-- Doesn't work on mason-lspconfig ensure_installed
 require("lspconfig").dartls.setup({
   capabilities = capabilities,
+})
+
+require("rust-tools").setup({
+  tools = {
+    runnables = {
+      use_telescope = true
+    },
+    inlay_hints = {
+      auto = true,
+      show_parameter_hints = false,
+      parameter_hints_prefix = "",
+      other_hints_prefix = "",
+    }
+  },
+  server = {
+    on_attach = function(_, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+    settings = {
+      -- to enable rust-analyzer settings visit:
+      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+      ["rust-analyzer"] = {
+        -- clippy on save
+        checkOnSave = {
+          command = "clippy",
+        },
+      },
+    },
+  },
 })
 
 local lsp = require("lsp-zero").preset({

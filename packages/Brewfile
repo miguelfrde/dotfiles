@@ -19,6 +19,9 @@ brew 'xz'
 # Needed for saving gpg passphrase to osx keychain
 brew 'pinentry-mac'
 
+# LSP stuff
+brew 'lua-language-server'  # needed by nvim lsp lua_ls
+
 # Some apps
 cask 'caffeine'
 cask 'google-chrome'
