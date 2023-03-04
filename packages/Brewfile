@@ -23,9 +23,9 @@ brew 'pinentry-mac'
 brew 'lua-language-server'  # needed by nvim lsp lua_ls
 
 # Some apps
+cask 'alacritty'
 cask 'caffeine'
 cask 'google-chrome'
-cask 'iterm2'
 cask 'spotify'
 
 # Communication

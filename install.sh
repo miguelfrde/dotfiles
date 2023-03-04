@@ -40,10 +40,6 @@ link_file `pwd`/zsh/zshrc ~/.zshrc
 mkdir -p ~/.oh-my-zsh/custom/themes
 cp zsh/miguelfrde.zsh-theme ~/.oh-my-zsh/custom/themes
 
-# TODO: change this for Linux.
-# Get the catpuccin theme for iTerm2
-git clone https://github.com/catppuccin/iterm ~/.config/catppuccin-iterm
-
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
@@ -52,6 +48,11 @@ link_file `pwd`/nvim ~/.config/nvim
 
 # Configure tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Configure alacritty
+mkdir -p ~/.config/alacritty
+git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
+link_file `pwd`/alacritty/alacritty.yml ~/config/alacritty/alacritty.yml
 
 # Link my dotfiles.
 link_files 'dotfiles'
