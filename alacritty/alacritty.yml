@@ -1,6 +1,9 @@
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
 
+env:
+  TERM: xterm-256color
+
 # Font configuration
 font:
   # Normal (roman) font face

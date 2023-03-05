@@ -22,3 +22,5 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # GPG. I had to add this so that git commit wouldn't fail.
 export GPG_TTY=$(tty)
+
+export TERM=xterm-256color

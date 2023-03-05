@@ -28,9 +28,6 @@ alias rpi='ssh 192.168.1.10 -l pi'
 # Use hub
 alias git=hub
 
-# Use ripgrep
-alias grep=rg
-
 # rc files
 alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
@@ -39,5 +36,3 @@ alias vimrc='vim ~/.vimrc'
 alias vim=nvim
 
 alias weather="curl http://wttr.in"
-
-#alias tmux="TERM=xterm-256color tmux"

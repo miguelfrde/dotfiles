@@ -7,6 +7,8 @@ vim.opt.cursorline = true -- Highlight current line
 vim.opt.ruler = true -- always show current pos
 vim.opt.background = 'dark' -- dark bg
 vim.opt.signcolumn = 'yes'
+
+vim.o.termguicolors = true
 vim.cmd.colorscheme("catppuccin-frappe")
 
 vim.opt.number = true
