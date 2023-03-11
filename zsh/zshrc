@@ -50,3 +50,7 @@ bindkey '' fancy-ctrl-z
 
 # Cargo
 source "$HOME/.cargo/env"
+
+# Ruby stuff
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh

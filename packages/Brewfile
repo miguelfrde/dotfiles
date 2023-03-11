@@ -1,6 +1,6 @@
 tap 'homebrew/cask-fonts'
 
-# Tool
+# Tools
 brew 'gpg'
 brew 'fzf'
 brew 'htop'
@@ -15,6 +15,10 @@ brew 'zsh-syntax-highlighting'
 # Needed for pyenv install
 brew 'pyenv'
 brew 'xz'
+
+# Used to manage ruby versions
+brew 'chruby'
+brew 'ruby-install'
 
 # Needed for saving gpg passphrase to osx keychain
 brew 'pinentry-mac'
