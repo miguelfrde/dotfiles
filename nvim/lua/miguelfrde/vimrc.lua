@@ -1,6 +1,8 @@
 -- Use system clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Use , as the <Leader>
+vim.g.mapleader = ","
 
 -- Interface stuff
 vim.opt.cursorline = true -- Highlight current line

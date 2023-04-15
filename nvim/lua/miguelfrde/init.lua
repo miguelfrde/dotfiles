@@ -1,5 +1,5 @@
-require("miguelfrde.packer")
 require("miguelfrde.vimrc")
+require("miguelfrde.packer")
 require("miguelfrde.plugins")
 
 -- LSP Diagnostics Options Setup

@@ -92,12 +92,8 @@ for _, lsp in pairs(lsps) do
   end
 end
 
--- Doesn't work on mason-lspconfig ensure_installed
-require("lspconfig").dartls.setup({
-  capabilities = capabilities,
-})
-
-require("rust-tools").setup({
+local rt = require("rust-tools");
+rt.setup({
   tools = {
     runnables = {
       use_telescope = true
@@ -109,12 +105,13 @@ require("rust-tools").setup({
       other_hints_prefix = "",
     }
   },
+  capabilities = capabilities,
   server = {
     on_attach = function(_, bufnr)
       -- Hover actions
       vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
       -- Code action groups
-      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+      vim.keymap.set("n", "<Leader>ca", rt.code_action_group.code_action_group, { buffer = bufnr })
     end,
     settings = {
       -- to enable rust-analyzer settings visit:
@@ -129,14 +126,7 @@ require("rust-tools").setup({
   },
 })
 
-local lsp = require("lsp-zero").preset({
-  name = "minimal",
-  set_lsp_keymaps = true,
-  manage_nvim_cmp = true,
-  suggest_lsp_servers = false,
-})
-lsp.nvim_workspace()
-lsp.setup()
+rt.inlay_hints.enable()
 
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
