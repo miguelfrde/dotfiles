@@ -104,6 +104,9 @@ return require("packer").startup(function(use)
   -- Fidget: to see rust-analyzer progress.
   use 'j-hui/fidget.nvim'
 
+  -- Thinner column markers than vim's colorcolumn
+  use 'lukas-reineke/virt-column.nvim'
+
   -- Leave these after all plugins.
   if packer_bootstrap then
     require('packer').sync()

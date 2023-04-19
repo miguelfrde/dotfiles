@@ -6,6 +6,7 @@ vim.g.mapleader = ","
 
 -- Interface stuff
 vim.opt.cursorline = true -- Highlight current line
+vim.opt.colorcolumn = "80,100";
 vim.opt.ruler = true -- always show current pos
 vim.opt.background = 'dark' -- dark bg
 vim.opt.signcolumn = 'yes'
