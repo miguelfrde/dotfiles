@@ -107,6 +107,9 @@ return require("packer").startup(function(use)
   -- Thinner column markers than vim's colorcolumn
   use 'lukas-reineke/virt-column.nvim'
 
+  -- Hilight TODO comments
+  use 'folke/todo-comments.nvim'
+
   -- Leave these after all plugins.
   if packer_bootstrap then
     require('packer').sync()

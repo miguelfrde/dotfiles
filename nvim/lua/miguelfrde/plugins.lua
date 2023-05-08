@@ -178,3 +178,5 @@ require('gitsigns').setup({
 require("fidget").setup()
 
 require("virt-column").setup()
+
+require("todo-comments").setup()
