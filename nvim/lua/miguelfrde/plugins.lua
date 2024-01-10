@@ -10,7 +10,7 @@ local lsps = {
   "pyright",
   "marksman", -- markdown
   "sqlls",
-  "taplo", -- toml
+  "taplo",    -- toml
   "tsserver",
   "yamlls",
 }
@@ -53,7 +53,7 @@ cmp.setup({
     -- Add tab support
     ["<S-Tab>"] = cmp.mapping.select_prev_item(),
     ["<Tab>"] = cmp.mapping.select_next_item(),
-    ["<C-S-f>"] = cmp.mapping.scroll_docs( -4),
+    ["<C-S-f>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.close(),
@@ -92,6 +92,10 @@ for _, lsp in pairs(lsps) do
   end
 end
 
+-- Do not set up. Done by flutter-tools.
+-- lspconfig.dartls.setup({})
+require("flutter-tools").setup({});
+
 local rt = require("rust-tools");
 rt.setup({
   tools = {
@@ -107,7 +111,8 @@ rt.setup({
   },
   capabilities = capabilities,
   server = {
-    on_attach = function(_, bufnr)
+    on_attach = function(client, bufnr)
+      client.server_capabilities.semanticTokensProvider = nil
       -- Hover actions
       vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
       -- Code action groups

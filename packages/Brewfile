@@ -1,4 +1,5 @@
 tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 
 # Tools
 brew 'gpg'
@@ -30,6 +31,7 @@ brew 'lua-language-server'  # needed by nvim lsp lua_ls
 cask 'alacritty'
 cask 'caffeine'
 cask 'google-chrome'
+caks 'insomnia'
 cask 'protonvpn'
 cask 'qbittorrent'
 cask 'spotify'
@@ -54,3 +56,7 @@ cask 'font-hack-nerd-font'
 # Audio
 cask 'blackhole-16ch'
 cask 'vcv-rack'  # Needs rosetta
+
+# Development
+brew 'flutter'
+cask 'docker'

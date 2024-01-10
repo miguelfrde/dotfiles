@@ -1,9 +1,10 @@
 -- Automatically bootstrap packer on a new machine.
+--
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+    fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -61,11 +62,14 @@ return require("packer").startup(function(use)
     }
   }
 
+  use "akinsho/flutter-tools.nvim"
+
+
   -- Highlight and remove trailing whitespace
-  use 'ntpeters/vim-better-whitespace'
+  use "ntpeters/vim-better-whitespace"
 
   -- Incremental parsing
-  use 'nvim-treesitter/nvim-treesitter'
+  use "nvim-treesitter/nvim-treesitter"
 
   -- Auto close brackets
   use "rstacruz/vim-closer"
@@ -97,21 +101,24 @@ return require("packer").startup(function(use)
   use { "alexghergh/nvim-tmux-navigation" }
 
   -- Git signs and status bar
-  use 'lewis6991/gitsigns.nvim'
+  use "lewis6991/gitsigns.nvim"
   -- Git utils
-  use 'tpope/vim-fugitive'
+  use "tpope/vim-fugitive"
 
   -- Fidget: to see rust-analyzer progress.
-  use 'j-hui/fidget.nvim'
+  use {
+    "j-hui/fidget.nvim",
+    tag = "legacy",
+  }
 
-  -- Thinner column markers than vim's colorcolumn
-  use 'lukas-reineke/virt-column.nvim'
+  -- Thinner column markers than vim"s colorcolumn
+  use "lukas-reineke/virt-column.nvim"
 
   -- Hilight TODO comments
-  use 'folke/todo-comments.nvim'
+  use "folke/todo-comments.nvim"
 
   -- Leave these after all plugins.
   if packer_bootstrap then
-    require('packer').sync()
+    require("packer").sync()
   end
 end)

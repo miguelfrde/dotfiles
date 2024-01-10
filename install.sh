@@ -52,7 +52,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Configure alacritty
 mkdir -p ~/.config/alacritty
 git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
-link_file `pwd`/alacritty/alacritty.yml ~/config/alacritty/alacritty.yml
+link_file `pwd`/alacritty/alacritty.toml ~/config/alacritty/alacritty.toml
 
 # Link my dotfiles.
 link_files 'dotfiles'
@@ -74,3 +74,6 @@ then
   gpg --armor --export $gpg_key_id
   echo 'Add this key to your GitHub account: Settings > SSH and GPG keys'
 fi
+
+# Had to run this for docker-compose to work
+docker-compose-v1 build --force-rm
