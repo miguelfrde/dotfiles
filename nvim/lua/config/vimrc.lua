@@ -1,8 +1,9 @@
--- Use system clipboard
-vim.opt.clipboard = "unnamedplus"
-
 -- Use , as the <Leader>
 vim.g.mapleader = ","
+vim.g.maplocalleader = "\\"
+
+-- Use system clipboard
+vim.opt.clipboard = "unnamedplus"
 
 -- Interface stuff
 vim.opt.cursorline = true   -- Highlight current line
@@ -10,9 +11,6 @@ vim.opt.colorcolumn = "80,100";
 vim.opt.ruler = true        -- always show current pos
 vim.opt.background = 'dark' -- dark bg
 vim.opt.signcolumn = 'yes'
-
-vim.o.termguicolors = true
-vim.cmd.colorscheme("catppuccin-frappe")
 
 vim.opt.number = true
 
@@ -54,7 +52,6 @@ map('n', '<C-p>', ':bprevious<CR>', { noremap = true, silent = false })
 vim.g.better_whitespace_enabled = true
 vim.g.strip_whitespace_on_save = true
 vim.g.strip_whitespace_confirm = false
-vim.g.better_whitespace_guicolor = require("catppuccin.palettes").get_palette("frappe").red;
 vim.cmd('command! FixWhitespace StripWhitespace')
 
 -- Global mappings.

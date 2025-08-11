@@ -1,20 +1,17 @@
-require("miguelfrde.vimrc")
-require("miguelfrde.packer")
-require("miguelfrde.plugins")
-
--- LSP Diagnostics Options Setup
-local sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = ''
-  })
-end
-
-sign({ name = 'DiagnosticSignError', text = '' })
-sign({ name = 'DiagnosticSignWarn', text = '' })
-sign({ name = 'DiagnosticSignHint', text = '' })
-sign({ name = 'DiagnosticSignInfo', text = '' })
+-- Update to: https://neovim.io/doc/user/diagnostic.html#diagnostic-signs
+---- LSP Diagnostics Options Setup
+--local sign = function(opts)
+--  vim.fn.sign_define(opts.name, {
+--    texthl = opts.name,
+--    text = opts.text,
+--    numhl = ''
+--  })
+--end
+--
+--sign({ name = 'DiagnosticSignError', text = '' })
+--sign({ name = 'DiagnosticSignWarn', text = '' })
+--sign({ name = 'DiagnosticSignHint', text = '' })
+--sign({ name = 'DiagnosticSignInfo', text = '' })
 
 vim.diagnostic.config({
   virtual_text = false,
