@@ -10,7 +10,7 @@ source ~/.exports
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # oh-my-zsh plugins
-plugins=(brew git pip python github docker)
+plugins=(brew git pip python gh docker)
 
 # Theme to load
 ZSH_THEME="miguelfrde"
@@ -62,3 +62,10 @@ eval "$(pyenv init -)"
 
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/miguel/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/miguel/.antigravity-ide/antigravity-ide/bin:$PATH"

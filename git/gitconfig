@@ -1,6 +1,7 @@
 [user]
     name = Miguel Flores Ruiz de Eguino
     email = 1889916+miguelfrde@users.noreply.github.com
+    signingkey = 4D23669EA992C04D
 [core]
     quotepath = false
     excludesfile = ~/.gitignore

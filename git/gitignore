@@ -13,3 +13,5 @@
 *.o
 *.a
 *.so
+
+**/.claude/settings.local.json
