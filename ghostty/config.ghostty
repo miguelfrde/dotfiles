@@ -1,0 +1,10 @@
+theme = Catppuccin Frappe
+
+font-family = Hack Nerd Font Mono
+font-size = 13
+adjust-cell-width = 1
+adjust-cell-height = 1
+
+# Fat block cursor. Shell integration would otherwise switch it to a bar at the prompt.
+cursor-style = block
+shell-integration-features = no-cursor

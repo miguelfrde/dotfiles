@@ -49,10 +49,9 @@ link_file `pwd`/nvim ~/.config/nvim
 # Configure tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# Configure alacritty
-mkdir -p ~/.config/alacritty
-git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
-link_file `pwd`/alacritty/alacritty.toml ~/config/alacritty/alacritty.toml
+# Configure ghostty
+mkdir -p ~/.config/ghostty
+link_file `pwd`/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
 
 # Link my dotfiles.
 link_files 'dotfiles'

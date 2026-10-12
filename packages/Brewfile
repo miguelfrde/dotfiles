@@ -28,8 +28,8 @@ brew 'pinentry-mac'
 brew 'lua-language-server'  # needed by nvim lsp lua_ls
 
 # Some apps
-cask 'alacritty'
 cask 'caffeine'
+cask 'ghostty'
 cask 'google-chrome'
 caks 'insomnia'
 cask 'protonvpn'

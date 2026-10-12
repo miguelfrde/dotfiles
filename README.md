@@ -4,8 +4,8 @@ My dotfiles configuration.
 
 ## Included
 
-- `alacritty/*`: contains my configuration for the Alacritty terminal emulator.
 - `dotfiles/*`: contains useful shell stuff such as aliases, exports, functions and my tmux.conf.
+- `ghostty/*`: contains my configuration for the Ghostty terminal emulator.
 - `git/*`: contains my git config.
 - `nvim/*`: contains my NeoVim configuration.
 - `packages/*`: contains software I like to install.
