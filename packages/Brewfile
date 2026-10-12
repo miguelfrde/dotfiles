@@ -31,7 +31,7 @@ brew 'lua-language-server'  # needed by nvim lsp lua_ls
 cask 'caffeine'
 cask 'ghostty'
 cask 'google-chrome'
-caks 'insomnia'
+cask 'insomnia'
 cask 'protonvpn'
 cask 'qbittorrent'
 cask 'spotify'
