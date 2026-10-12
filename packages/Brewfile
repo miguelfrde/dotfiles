@@ -3,7 +3,6 @@ brew 'gpg'
 brew 'fzf'
 brew 'git-lfs'
 brew 'htop'
-brew 'hub'
 brew 'gh'
 brew 'jj'
 brew 'neovim'
@@ -41,6 +40,7 @@ brew 'lua-language-server'  # needed by nvim lsp lua_ls
 
 # Some apps
 cask '1password'
+cask 'balenaetcher'
 cask 'caffeine'
 cask 'disk-drill'
 cask 'firefox'
@@ -49,7 +49,7 @@ cask 'gimp'
 cask 'google-chrome'
 cask 'letos'
 cask 'protonvpn'
-cask 'qbittorrent'
+cask 'raspberry-pi-imager'
 cask 'spotify'
 cask 'tailscale-app'
 cask 'tor-browser'
@@ -62,18 +62,14 @@ cask 'whatsapp'
 cask 'zoom'
 
 # Quicklook plugins
-cask 'qlcolorcode'
 cask 'qlmarkdown'
-cask 'qlstephen'
-cask 'quicklook-json'
-cask 'quicklook-csv'
 
 # Fonts
 cask 'font-hack-nerd-font'
 
 # Audio
 cask 'blackhole-16ch'
-cask 'vcv-rack'  # Needs rosetta
+cask 'vcv-rack'
 
 # Development
 brew 'cocoapods'
@@ -85,8 +81,10 @@ cask 'antigravity'
 cask 'bruno'
 cask 'claude'
 cask 'codex'
-cask 'codex-app'
 cask 'docker-desktop'
+# The Flutter SDK is managed in place with `flutter upgrade`; the cask stays listed so a
+# `brew bundle cleanup` never removes it, but never upgrade it greedily (that would
+# replace the checkout).
 cask 'flutter'
 cask 'virtualbox'
 cask 'visual-studio-code'

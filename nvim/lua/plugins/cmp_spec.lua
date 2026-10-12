@@ -15,14 +15,12 @@ return {
       local cmp = require("cmp")
       return {
         sources = cmp.config.sources({
-          { name = "buffer" },
-          { name = "calc" },
           { name = "luasnip" },
-          { name = "nvim_lua",               keyword_length = 2 },
-          { name = "nvim_lsp",               keyword_length = 3 },
-          { name = "nvim_lsp_signature_help" },
+          { name = "nvim_lua", keyword_length = 2 },
+          { name = "nvim_lsp", keyword_length = 3 },
           { name = "path" },
         }, {
+          -- Fallback: buffer words, only when nothing above returns anything
           { name = "buffer" },
         }),
         mapping = {

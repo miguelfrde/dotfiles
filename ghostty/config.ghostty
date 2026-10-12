@@ -5,6 +5,6 @@ font-size = 13
 adjust-cell-width = 1
 adjust-cell-height = 1
 
-# Fat block cursor. Shell integration would otherwise switch it to a bar at the prompt.
-cursor-style = block
+# Keep the default block cursor everywhere. Shell integration would otherwise
+# switch it to a bar at the prompt.
 shell-integration-features = no-cursor

@@ -1,2 +1,2 @@
-.headers on
+-- column mode prints headers on its own (SQLite >= 3.33), so no .headers on
 .mode column

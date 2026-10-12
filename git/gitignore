@@ -1,17 +1,17 @@
-# OSX
+# macOS
 .DS_Store
+._*
+.AppleDouble
 *.app
-.Spotlight-V100
-.Trashes
 
 # Python
-.py[cod]
+*.py[cod]
+__pycache__/
 *.egg
+*.egg-info/
 
 # C
-*.out
+a.out
 *.o
-*.a
-*.so
 
 **/.claude/settings.local.json

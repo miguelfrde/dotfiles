@@ -10,7 +10,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo -n "Enter this computer name [if none, nothing will be done]: "
-read name
+read -r name
 
 if [ "$name" != "" ]; then
     sudo scutil --set ComputerName "$name"
@@ -26,9 +26,6 @@ fi
 
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-# Disable the open app confirmation dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Check for software updates daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -47,9 +44,6 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-# Menu bar: disable transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 #################################
 #       Trackpad and mouse      #
@@ -112,9 +106,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Allow text selection in Quick Look
-defaults write com.apple.finder QLEnableTextSelection -bool true
-
 # Enable spring loading for directories
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
@@ -159,20 +150,6 @@ defaults write com.apple.dock largesize -float 65.8125
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
-
-# Transparent dock in Mavericks
-defaults write com.apple.dock hide-mirror -bool true
-
-
-#################################
-#           Dashboard           #
-#################################
-
-# Disable Dashboard
-#defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-#defaults write com.apple.dock dashboard-in-overlay -bool true
 
 
 #################################
@@ -229,53 +206,10 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 
 #################################
-#             iTunes            #
-#################################
-
-# Allow half stars
-defaults write com.apple.iTunes 'allow-half-stars' -bool true
-
-
-#################################
-#        Transmission       #
-#################################
-
-# Use `~/Documents/Torrents` to store incomplete downloads
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents/Incomplete"
-
-# Use '~/Documents/Torrents' to store downloads
-defaults write org.m0k.transmission DownloadFolder -string "${HOME}/Downloads/Torrents/"
-
-# Force encryption
-defaults write org.m0k.transmission EncryptionRequire -bool true
-
-# Don’t prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-# Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
-
-#################################
-#             Alfred            #
-#################################
-
-# Alfred syncfolder = ~/Dropbox
-defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/Dropbox/"
-
-
-#################################
 #       Kill affected apps      #
 #################################
 
-for app in "Finder" "Dock" "Safari" "Mail" "Activity Monitor" "SystemUIServer" \
-           "Transmission" "Alfred"
+for app in "Finder" "Dock" "Safari" "Mail" "Activity Monitor" "SystemUIServer"
 do
     killall "$app" > /dev/null 2>&1
 done

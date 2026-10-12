@@ -5,63 +5,64 @@ return {
     opts = {},
   },
 
-  -- LSP support
-  { "neovim/nvim-lspconfig" },
+  -- LSP support. Server definitions come from nvim-lspconfig's lsp/ directory;
+  -- on Neovim 0.11+ each one must be enabled explicitly.
+  -- lua-language-server itself is installed via packages/Brewfile.
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      vim.lsp.enable("lua_ls")
+    end,
+  },
 
-  -- Rust analyzer utils
+  -- Rust analyzer utils. rust-analyzer comes from rustup.
+  -- rustaceanvim reads vim.g.rustaceanvim (not lazy.nvim spec keys), so it is
+  -- set in `init`, which runs before the plugin loads.
   {
     "mrcjkb/rustaceanvim",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-    },
     version = "^6",
     lazy = false, -- This plugin is already lazy
-    tools = {
-      runnables = {
-        use_telescope = true,
+    init = function()
+      vim.g.rustaceanvim = {
+        server = {
+          on_attach = function(_, bufnr)
+            vim.keymap.set("n", "<leader>ca", function()
+              vim.cmd.RustLsp("codeAction")
+            end, { silent = true, buffer = bufnr })
+
+            -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
+            vim.keymap.set("n", "K", function()
+              vim.cmd.RustLsp({ "hover", "actions" })
+            end, { silent = true, buffer = bufnr })
+          end,
+          default_settings = {
+            -- clippy on save is already the default: rustaceanvim sets
+            -- check.command = "clippy" whenever cargo-clippy is on PATH.
+            ["rust-analyzer"] = {
+              procMacro = {
+                enable = true,
+                -- An empty Lua table serializes as a JSON array, which
+                -- rust-analyzer rejects for this map, so only set it when needed:
+                -- ignored = { ["async-trait"] = { "async_trait" } },
+              },
+              files = {
+                excludeDirs = {
+                  ".direnv",
+                  ".git",
+                  ".github",
+                  ".gitlab",
+                  "bin",
+                  "node_modules",
+                  "target",
+                  "venv",
+                  ".venv",
+                },
+              },
+            },
+          },
+        },
       }
-    },
-    server = {
-      on_attach = function(client, bufnr)
-        vim.keymap.set("n", "<leader>ca", function()
-          vim.cmd.RustLsp("codeAction")
-        end, { silent = true, buffer = bufnr })
-
-        -- Override Neovim"s built-in hover keymap with rustaceanvim"s hover actions
-        vim.keymap.set("n", "K", function()
-          vim.cmd.RustLsp({"hover", "actions"})
-        end, { silent = true, buffer = bufnr })
-
-      end,
-      default_settings = {
-        ["rust-analyzer"] = {
-          -- clippy on save
-          checkOnSave = diagnostics == "rust-analyzer",
-        },
-        diagnostics = {
-          enable = diagnostics == "rust-analyzer",
-        },
-      },
-      procMacro = {
-        enable = true,
-        ignored = {
-          --["async-trait"] = { "async_trait" },
-        }
-      },
-      files = {
-        excludeDirs = {
-          ".direnv",
-          ".git",
-          ".github",
-          ".gitlab",
-          "bin",
-          "node_modules",
-          "target",
-          "venv",
-          ".venv",
-        },
-      },
-    }
+    end,
   },
 
   {

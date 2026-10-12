@@ -1,26 +1,18 @@
 # Always show colors
 export CLICOLOR=1
 
-# Default editor -> Vim
-export EDITOR='vim'
+# Default editor -> Neovim (programs that exec $EDITOR/$VISUAL do not see the
+# interactive `vim` alias)
+export EDITOR=nvim
+export VISUAL=nvim
 
-# Don't show duplicates on 'history' and ignore commands starting with ' '
-export HISTCONTROL=ignoreboth
-
-# Grep using a green color
-export GREP_OPTIONS='--color=auto'
-
+# Grep match color: GREP_COLOR for Apple's BSD grep, GREP_COLORS for GNU grep
 export GREP_COLOR='1;32'
+export GREP_COLORS='mt=1;32'
 
 # Zsh terminal title
 export ZSH_THEME_TERM_TAB_TITLE_IDLE="%c"
 export ZSH_THEME_TERM_TITLE_IDLE="%n@%m %5c"
 
-# Pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH="$PYENV_ROOT/bin:$PATH"
-
 # GPG. I had to add this so that git commit wouldn't fail.
 export GPG_TTY=$(tty)
-
-export TERM=xterm-256color

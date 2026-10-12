@@ -7,6 +7,25 @@
     excludesfile = ~/.gitignore
     editor = /opt/homebrew/bin/nvim
     autocrlf = input
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune = true
+[rebase]
+    autoStash = true
+    autoSquash = true
+    updateRefs = true
+[rerere]
+    enabled = true
+    autoUpdate = true
+[diff]
+    algorithm = histogram
+    colorMoved = default
 [alias]
     ci = commit
     co = checkout
@@ -15,6 +34,8 @@
     d = difftool
 [web]
     browser = google-chrome
+[browser "google-chrome"]
+    path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 [color]
     ui = true
 [color "diff"]
@@ -32,22 +53,25 @@
     current = yellow
     local = green
     remote = magenta
-[hub]
-    protocol = https
 [credential]
     helper = osxkeychain
 [grep]
-    extendRegexp = true
+    patternType = extended
     lineNumber = true
 [filter "lfs"]
-    clean = git-lfs clean %f
-    smudge = git-lfs smudge %f
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
     required = true
+    process = git-lfs filter-process
 [merge]
     tool = opendiff
+    conflictStyle = zdiff3
+[mergetool]
+    keepBackup = false
+    prompt = false
 [difftool]
     prompt = false
 [commit]
     gpgsign = true
-[gpg]
-    program = gpg
+[tag]
+    gpgSign = true

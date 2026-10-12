@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -7,30 +5,27 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 
-# Always ls showing colors
-alias ls='ls -G'
-
 # Like ls -la, but with directories first
 alias ll='tree --dirsfirst -ChFupDaLg 1'
 
+# Grep with colored matches
+alias grep='grep --color=auto'
+
 # View current IP
-alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+alias ip='curl -s https://api.ipify.org'
 
 # View local IP
 alias localip="ipconfig getifaddr en0"
 
 # View size of current directory
-alias d="du -h -d=1"
+alias d="du -h -d 1"
 
 # Used to connect to Raspberry Pi
 alias rpi='ssh 192.168.1.10 -l pi'
 
-# Use hub
-alias git=hub
-
 # rc files
-alias zshrc='vim ~/.zshrc'
-alias vimrc='vim ~/.vimrc'
+alias zshrc='nvim ~/.zshrc'
+alias vimrc='nvim ~/.config/nvim/lua/config/vimrc.lua'
 
 # Use neovim
 alias vim=nvim
