@@ -1,21 +1,33 @@
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-
 # Tools
 brew 'gpg'
 brew 'fzf'
+brew 'git-lfs'
 brew 'htop'
 brew 'hub'
 brew 'gh'
+brew 'jj'
 brew 'neovim'
+brew 'nmap'
+brew 'openssh'
 brew 'ripgrep'
+brew 'shellcheck'
+brew 'sniffnet'
 brew 'tmux'
 brew 'tree'
+brew 'unbound'
+brew 'ykman'
 brew 'zsh-syntax-highlighting'
+
+# Databases, added to PATH in zshrc
+brew 'libpq'
+brew 'sqlite'
 
 # Needed for pyenv install
 brew 'pyenv'
 brew 'xz'
+
+# Python packaging
+brew 'uv'
 
 # Used to manage ruby versions
 brew 'chruby'
@@ -30,12 +42,16 @@ brew 'lua-language-server'  # needed by nvim lsp lua_ls
 # Some apps
 cask '1password'
 cask 'caffeine'
+cask 'disk-drill'
+cask 'firefox'
 cask 'ghostty'
+cask 'gimp'
 cask 'google-chrome'
-cask 'insomnia'
+cask 'letos'
 cask 'protonvpn'
 cask 'qbittorrent'
 cask 'spotify'
+cask 'tailscale-app'
 cask 'tor-browser'
 cask 'vlc'
 
@@ -43,6 +59,7 @@ cask 'vlc'
 cask 'signal'
 cask 'telegram'
 cask 'whatsapp'
+cask 'zoom'
 
 # Quicklook plugins
 cask 'qlcolorcode'
@@ -59,5 +76,17 @@ cask 'blackhole-16ch'
 cask 'vcv-rack'  # Needs rosetta
 
 # Development
-brew 'flutter'
-cask 'docker'
+brew 'cocoapods'
+brew 'go'
+brew 'node'
+brew 'protobuf'
+cask 'android-studio'
+cask 'antigravity'
+cask 'bruno'
+cask 'claude'
+cask 'codex'
+cask 'codex-app'
+cask 'docker-desktop'
+cask 'flutter'
+cask 'virtualbox'
+cask 'visual-studio-code'
